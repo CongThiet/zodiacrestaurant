@@ -28,7 +28,20 @@ class UserController extends Controller
                 'phone.max'=>'Số điện thoại của bạn quá dài.',
             ]);
         $user = User::find($id);
-        $user->update($request->all());
+        if($request->image_avatar){
+            $user->image_avatar = time().'.'.$request->image_avatar->getClientOriginalExtension();
+            $request->image_avatar->move(public_path('admin/images/images-avatar'), $user->image_avatar);
+        }
+        $user->lastName = $request->lastName;
+        $user->name = $request->name;
+        $user->address = $request->address;
+        $user->birthday = $request->birthday;
+        $user->phone = $request->phone;
+        $user->gender = $request->gender;
+        $user->other_email = $request->other_email;
+        $user->facebook = $request->facebook;
+        $user->save();
+        // $user->update($request->all();
         return redirect('../../profile')->with('updated','Thông tin của bạn đã được cập nhật.');
     }
     public function changePassword(){

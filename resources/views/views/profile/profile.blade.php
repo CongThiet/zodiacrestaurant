@@ -27,7 +27,7 @@
                     </li>
                 </ul>
                     <div class="profile col-md-6">
-                    @if( Auth::user()->image_avatar == 0 )
+                    @if( Auth::user()->image_avatar == null )
                         <img class="profile-user-img img-responsive img-circle" src="../../admin/images/images-avatar/avatar-null.png" alt="User profile picture" style="width: 220px; height: 229px;">
                     @else
                         <img class="profile-user-img img-responsive img-circle" src="../../admin/images/images-avatar/{{Auth::user()->image_avatar}}" alt="User profile picture" style="width: 220px; height: 229px;">

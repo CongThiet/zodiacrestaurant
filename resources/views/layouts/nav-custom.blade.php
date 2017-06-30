@@ -35,7 +35,7 @@
 				@if(Auth::check())
 				<li class="dropdown ">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						@if( Auth::user()->image_avatar == 0 )
+						@if( Auth::user()->image_avatar == null )
                             <img class="img-circle" src="../../admin/images/images-avatar/avatar-null.png" alt="User profile picture" style="width: 26px; height: 26px;">
                         @else
                             <img class="img-circle" src="../../admin/images/images-avatar/{{Auth::user()->image_avatar}}" alt="User profile picture" style="width: 26px; height: 26px;">
