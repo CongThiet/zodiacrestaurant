@@ -16,7 +16,7 @@
   Laravel
 ## Database:
   Mysql
-## Upload
+## IMPORT DATABASE
  1. Import file ```restaurant_db.sql``` vào database.
  2. Edit file ```.env``` và ```config/database.php``` với các thông số:   
   <ul>
