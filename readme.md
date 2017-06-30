@@ -23,6 +23,6 @@
   <li>DB_HOST=127.0.0.1</li>
   <li>DB_PORT=3306</li>
   <li>DB_DATABASE=restaurant_db</li>
-  <li><li>DB_USERNAME=root</li>
+  <li>DB_USERNAME=root</li>
   <li>DB_PASSWORD=</li>
  </ul>
