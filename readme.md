@@ -17,10 +17,10 @@
 ## Database:
   Mysql
 ## Upload
- - Import file ```restaurant_db.sql``` vào database có tên là ```restaurant_db```. edit file ```.env``` và ```config/database.php``` với các thông số:   
- <ul>
-  <li>DB_CONNECTION=mysql</li>
-  <li>DB_HOST=127.0.0.1</li>
-  <li>DB_PORT=3306</li>
-  <li>DB_DATABASE=restaurant_db</li>
- </ul>
+ 1. Import file ```restaurant_db.sql``` vào database.
+ 2. Edit file ```.env``` và ```config/database.php``` với các thông số:   
+  <ul>
+    <li>DB_DATABASE: tên databases đã tạo</li>
+    <li>DB_USERNAME: tên người dùng được cấp quyền truy cập database</li>
+    <li>DB_PASSWORD: password người dùng được cấp quyền try cập database</li>
+  </ul>
