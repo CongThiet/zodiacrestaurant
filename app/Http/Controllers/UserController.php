@@ -30,7 +30,7 @@ class UserController extends Controller
         $user = User::find($id);
         if($request->image_avatar){
             $user->image_avatar = time().'.'.$request->image_avatar->getClientOriginalExtension();
-            $request->image_avatar->move(public_path('admin/images/images-avatar'), $user->image_avatar);
+            $request->image_avatar->move('admin/images/images-avatar', $user->image_avatar);
         }
         $user->lastName = $request->lastName;
         $user->name = $request->name;
