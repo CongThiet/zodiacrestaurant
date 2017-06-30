@@ -6,7 +6,12 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
-## LINK WEBSITE: http://zodiacrestaurant.hol.es/
-## Công nghệ sử dụng: HTML, CSS, JS, PHP
-## Framwork: Laravel
-## Database: Mysql
+## LINK WEBSITE: 
+  http://zodiacrestaurant.hol.es/
+   
+## Công nghệ sử dụng:
+  HTML, CSS, JS, PHP
+## Framwork:
+  Laravel
+## Database:
+  Mysql
