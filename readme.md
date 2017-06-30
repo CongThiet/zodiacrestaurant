@@ -16,3 +16,11 @@
   Laravel
 ## Database:
   Mysql
+## Upload
+  import file restaurant_db vào database có tên là restaurant_db. edit file .env và config/database.php với các thông số 
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=restaurant_db
+    DB_USERNAME=root
+    DB_PASSWORD=
