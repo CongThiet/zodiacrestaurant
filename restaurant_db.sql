@@ -2,10 +2,10 @@
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 28, 2017 lúc 01:11 CH
--- Phiên bản máy phục vụ: 10.1.21-MariaDB
--- Phiên bản PHP: 5.6.30
+-- Host: 127.0.0.1
+-- Generation Time: Jul 06, 2017 at 07:35 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `restaurant_db`
+-- Database: `restaurant_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -34,7 +34,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `category`, `created_at`, `updated_at`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `categories` (`id`, `category`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contacts`
+-- Table structure for table `contacts`
 --
 
 CREATE TABLE `contacts` (
@@ -57,14 +57,28 @@ CREATE TABLE `contacts` (
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `message` text NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT 'chưa xem',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `message`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Trần Văn An', 'antv96nd@gmail.com', '0987654321', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-03 03:04:37', '2017-07-03 07:17:21'),
+(2, 'Vũ Thị Cúc', 'tranvananuet@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'chưa xem', '2017-07-03 03:04:48', '2017-07-03 03:04:48'),
+(3, 'Hưng Yên', 'antv96nd@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'chưa xem', '2017-07-03 03:04:59', '2017-07-03 03:04:59'),
+(4, 'AVX', 'loveforever827@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-03 03:05:13', '2017-07-03 10:55:05'),
+(5, 'Dương Công Minh', 'loveforever827@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-03 03:05:33', '2017-07-03 09:58:22'),
+(6, 'Hải Phòng', 'herolhp@gmail.com', '0914395317', 'Đây là hoá chất cực độc, là chất tẩy rửa dùng trong công nghiệp. Hoá chất này không được phép dùng trong y tế. Hoá chất này rất độc, nếu ngấm vào máu có thể lập tức gây tử vong. Nồng độ hoá chất này rất nặng. Thậm chí với số lượng lớn có thể gây mục xương trong thời gian ngắn.\r\n\r\nTrước đó, khoảng 8 giờ ngày 29/5, tại Khoa Thận nhân tạo, BV Đa khoa Hòa Bình, 18 bệnh nhân đang chạy thận nhân tạo bất ngờ xuất hiện triệu chứng của sốc phản vệ, 8 người tử vong sau đó.', 'đã xem', '2017-07-04 08:47:54', '2017-07-04 23:21:47'),
+(7, 'Hải Phòng', 'antv96nd@gmail.com', '12312312312312312312312312', '1213123', 'chưa xem', '2017-07-05 19:39:26', '2017-07-05 19:39:26');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `customers`
+-- Table structure for table `customers`
 --
 
 CREATE TABLE `customers` (
@@ -80,21 +94,29 @@ CREATE TABLE `customers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `customers`
+-- Dumping data for table `customers`
 --
 
 INSERT INTO `customers` (`id`, `user_id`, `name`, `gender`, `address`, `phone`, `note`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'Giao hàng ngay tối nay nhé cửa hàng', '2017-06-27 18:58:06', '2017-06-27 18:58:06'),
-(2, 1, 'Vũ Thị Cúc', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'Cần vào trưa nay', '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
-(3, 1, 'Trần An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0987654321', 'Giao hàng trưa nay', '2017-06-27 19:01:41', '2017-06-27 19:01:41'),
-(4, 1, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'cần vào lúc 11h trưa nay', '2017-06-27 19:08:48', '2017-06-27 19:08:48'),
-(5, 1, 'Vũ Thị Cúc', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'giao hàng sớm', '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
-(6, 1, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0987654321', 'cần vào lúc 6 giờ tối', '2017-06-27 21:40:30', '2017-06-27 21:40:30');
+(1, 3, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'Giao hàng ngay tối nay nhé cửa hàng', '2017-06-27 18:58:06', '2017-06-27 18:58:06'),
+(2, 3, 'Vũ Thị Cúc', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'Cần vào trưa nay', '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
+(3, 3, 'Trần An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0987654321', 'Giao hàng trưa nay', '2017-06-27 19:01:41', '2017-06-27 19:01:41'),
+(4, 3, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'cần vào lúc 11h trưa nay', '2017-06-27 19:08:48', '2017-06-27 19:08:48'),
+(5, 3, 'Vũ Thị Cúc', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'giao hàng sớm', '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
+(6, 4, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0987654321', 'cần vào lúc 6 giờ tối', '2017-06-27 21:40:30', '2017-06-27 21:40:30'),
+(7, 4, 'Trần Văn An', 'Nam', 'Nghĩa Hưng', '0987654321', 'giao hàng', '2017-06-30 21:37:15', '2017-06-30 21:37:15'),
+(8, 3, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', '123456', '2017-07-02 16:34:36', '2017-07-02 16:34:36'),
+(9, 3, 'Đặng Công', 'Nam', 'Nghĩa Hưng', '0987654321', 'Cần tối nay', '2017-07-02 16:43:19', '2017-07-02 16:43:19'),
+(10, 3, 'Dương Công Minh', 'Nữ', 'Bắc Giang', '123456789', 'Cần lúc 6h tối', '2017-07-02 19:07:32', '2017-07-02 19:07:32'),
+(11, 3, 'Đặng Hữu Công', 'Nữ', 'Nghĩa Hưng', '0914395317', 'Cần hàng tối nay', '2017-07-03 08:11:35', '2017-07-03 08:11:35'),
+(12, 3, 'Dương Công Minh', 'Nam', 'Nam Từ Liêm - Hà Nội', '123456789', 'Giao hàng tối nay', '2017-07-04 04:06:06', '2017-07-04 04:06:06'),
+(13, 5, 'Cao Thái Châu', 'Nam', 'Trà Vinh', '04862493357', 'abc', '2017-07-04 23:10:39', '2017-07-04 23:10:39'),
+(14, 5, 'Cao Thái Châu', 'Nam', 'Trà Vinh', '04862493357', NULL, '2017-07-04 23:14:34', '2017-07-04 23:14:34');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `locations`
+-- Table structure for table `locations`
 --
 
 CREATE TABLE `locations` (
@@ -109,7 +131,7 @@ CREATE TABLE `locations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `locations`
+-- Dumping data for table `locations`
 --
 
 INSERT INTO `locations` (`id`, `location`, `city`, `image`, `phone`, `time_open_close`, `created_at`, `updated_at`) VALUES
@@ -122,7 +144,7 @@ INSERT INTO `locations` (`id`, `location`, `city`, `image`, `phone`, `time_open_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -132,7 +154,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -145,12 +167,24 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (92, '2017_06_21_140136_create_order_details_table', 1),
 (93, '2017_06_25_173658_create_contacts_table', 1),
 (94, '2017_06_27_043205_create_promotions_table', 1),
-(95, '2017_06_27_043717_create_locations_table', 1);
+(95, '2017_06_27_043717_create_locations_table', 1),
+(96, '2017_07_01_030715_create_roles_table', 2),
+(108, '2014_10_12_000000_create_users_table', 1),
+(109, '2014_10_12_100000_create_password_resets_table', 1),
+(110, '2017_05_19_041245_create_products_table', 1),
+(111, '2017_06_17_124007_create_categories_table', 1),
+(112, '2017_06_21_134619_create_customers_table', 1),
+(113, '2017_06_21_135411_create_orders_table', 1),
+(114, '2017_06_21_140136_create_order_details_table', 1),
+(115, '2017_06_25_173658_create_contacts_table', 1),
+(116, '2017_06_27_043205_create_promotions_table', 1),
+(117, '2017_06_27_043717_create_locations_table', 1),
+(118, '2017_07_01_030715_create_roles_table', 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -161,26 +195,36 @@ CREATE TABLE `orders` (
   `totalPrice` double NOT NULL,
   `payment` varchar(255) NOT NULL,
   `note` text,
+  `status` varchar(255) NOT NULL DEFAULT 'Đặt hàng',
+  `nameShip` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `orders`
+-- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `customer_id`, `user_id`, `orderDate`, `totalPrice`, `payment`, `note`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2017-06-28', 190, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng ngay tối nay nhé cửa hàng', '2017-06-27 18:58:07', '2017-06-27 18:58:07'),
-(2, 2, 1, '2017-06-28', 225.5, 'Thanh toán khi nhận hàng', 'Cần vào trưa nay', '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
-(3, 3, 1, '2017-06-28', 109, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng trưa nay', '2017-06-27 19:01:41', '2017-06-27 19:01:41'),
-(4, 4, 1, '2017-06-28', 127, 'Thanh toán khi nhận hàng', 'cần vào lúc 11h trưa nay', '2017-06-27 19:08:48', '2017-06-27 19:08:48'),
-(5, 5, 1, '2017-06-28', 81, 'Thanh toán khi nhận hàng', 'giao hàng sớm', '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
-(6, 6, 1, '2017-06-28', 171.5, 'Thanh toán khi nhận hàng', 'cần vào lúc 6 giờ tối', '2017-06-27 21:40:30', '2017-06-27 21:40:30');
+INSERT INTO `orders` (`id`, `customer_id`, `user_id`, `orderDate`, `totalPrice`, `payment`, `note`, `status`, `nameShip`, `created_at`, `updated_at`) VALUES
+(1, 1, 3, '2017-06-28', 190, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng ngay tối nay nhé cửa hàng', 'Đặt hàng', NULL, '2017-06-27 18:58:07', '2017-06-27 18:58:07'),
+(2, 2, 3, '2017-06-28', 225.5, 'Thanh toán khi nhận hàng', 'Cần vào trưa nay', 'Đặt hàng', NULL, '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
+(3, 3, 3, '2017-06-28', 109, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng trưa nay', 'Đặt hàng', NULL, '2017-06-27 19:01:41', '2017-06-27 19:01:41'),
+(4, 4, 3, '2017-06-28', 127, 'Thanh toán khi nhận hàng', 'cần vào lúc 11h trưa nay', 'Đặt hàng', NULL, '2017-06-27 19:08:48', '2017-06-27 19:08:48'),
+(5, 5, 3, '2017-06-28', 81, 'Thanh toán khi nhận hàng', 'giao hàng sớm', 'Đặt hàng', NULL, '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
+(6, 6, 4, '2017-06-28', 171.5, 'Thanh toán khi nhận hàng', 'cần vào lúc 6 giờ tối', 'Đặt hàng', NULL, '2017-06-27 21:40:30', '2017-06-27 21:40:30'),
+(7, 7, 4, '2017-07-01', 46, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'giao hàng', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-06-30 21:37:15', '2017-07-04 04:05:12'),
+(8, 8, 3, '2017-07-02', 81, 'Thanh toán khi nhận hàng', '123456', 'Đã nhận đơn hàng', 'Nguyễn Văn Mạnh', '2017-07-02 16:34:36', '2017-07-03 10:35:45'),
+(9, 9, 3, '2017-07-02', 144, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Cần tối nay', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-07-02 16:43:19', '2017-07-03 10:30:38'),
+(10, 10, 3, '2017-07-03', 160.5, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Cần lúc 6h tối', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-07-02 19:07:32', '2017-07-03 08:59:01'),
+(11, 11, 3, '2017-07-03', 67, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Cần hàng tối nay', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-07-03 08:11:35', '2017-07-03 10:29:06'),
+(12, 12, 3, '2017-07-04', 35, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng tối nay', 'Đặt hàng', NULL, '2017-07-04 04:06:06', '2017-07-04 04:06:06'),
+(13, 13, 5, '2017-07-05', 149, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'abc', 'Đã nhận đơn hàng', 'Nguyễn Văn Mạnh', '2017-07-04 23:10:39', '2017-07-04 23:11:01'),
+(14, 14, 5, '2017-07-05', 105, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', NULL, 'Đã nhận đơn hàng', 'Nguyễn Văn Mạnh', '2017-07-04 23:14:34', '2017-07-04 23:21:28');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_details`
+-- Table structure for table `order_details`
 --
 
 CREATE TABLE `order_details` (
@@ -194,7 +238,7 @@ CREATE TABLE `order_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `order_details`
+-- Dumping data for table `order_details`
 --
 
 INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES
@@ -213,12 +257,29 @@ INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `quantity`, `price`
 (13, 5, 1, 1, 46, '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
 (14, 5, 2, 1, 35, '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
 (15, 6, 3, 2, 53, '2017-06-27 21:40:30', '2017-06-27 21:40:30'),
-(16, 6, 7, 1, 65.5, '2017-06-27 21:40:30', '2017-06-27 21:40:30');
+(16, 6, 7, 1, 65.5, '2017-06-27 21:40:30', '2017-06-27 21:40:30'),
+(17, 7, 1, 1, 46, '2017-06-30 21:37:15', '2017-06-30 21:37:15'),
+(18, 8, 1, 1, 46, '2017-07-02 16:34:36', '2017-07-02 16:34:36'),
+(19, 8, 2, 1, 35, '2017-07-02 16:34:36', '2017-07-02 16:34:36'),
+(20, 9, 2, 1, 35, '2017-07-02 16:43:19', '2017-07-02 16:43:19'),
+(21, 9, 3, 1, 53, '2017-07-02 16:43:19', '2017-07-02 16:43:19'),
+(22, 9, 4, 1, 56, '2017-07-02 16:43:19', '2017-07-02 16:43:19'),
+(23, 10, 6, 1, 45.5, '2017-07-02 19:07:32', '2017-07-02 19:07:32'),
+(24, 10, 51, 2, 57.5, '2017-07-02 19:07:32', '2017-07-02 19:07:32'),
+(25, 11, 16, 1, 34, '2017-07-03 08:11:35', '2017-07-03 08:11:35'),
+(26, 11, 17, 1, 33, '2017-07-03 08:11:35', '2017-07-03 08:11:35'),
+(27, 12, 2, 1, 35, '2017-07-04 04:06:06', '2017-07-04 04:06:06'),
+(28, 13, 1, 1, 46, '2017-07-04 23:10:40', '2017-07-04 23:10:40'),
+(29, 13, 36, 1, 22, '2017-07-04 23:10:40', '2017-07-04 23:10:40'),
+(30, 13, 50, 1, 56, '2017-07-04 23:10:40', '2017-07-04 23:10:40'),
+(31, 13, 39, 1, 25, '2017-07-04 23:10:40', '2017-07-04 23:10:40'),
+(32, 14, 31, 1, 60, '2017-07-04 23:14:34', '2017-07-04 23:14:34'),
+(33, 14, 54, 1, 45, '2017-07-04 23:14:34', '2017-07-04 23:14:34');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -230,7 +291,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -244,7 +305,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `category_id`, `productName`, `price`, `image`, `created_at`, `updated_at`) VALUES
@@ -312,7 +373,7 @@ INSERT INTO `products` (`id`, `category_id`, `productName`, `price`, `image`, `c
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `promotions`
+-- Table structure for table `promotions`
 --
 
 CREATE TABLE `promotions` (
@@ -326,7 +387,7 @@ CREATE TABLE `promotions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `promotions`
+-- Dumping data for table `promotions`
 --
 
 INSERT INTO `promotions` (`id`, `title`, `image`, `link`, `description`, `created_at`, `updated_at`) VALUES
@@ -340,11 +401,26 @@ INSERT INTO `promotions` (`id`, `title`, `image`, `link`, `description`, `create
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `level_id` int(11) NOT NULL,
+  `role` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
+  `level` int(11) NOT NULL DEFAULT '3',
   `lastName` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
@@ -362,137 +438,152 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `lastName`, `name`, `address`, `birthday`, `phone`, `gender`, `email`, `other_email`, `facebook`, `password`, `image_avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'An', 'Trần Văn An', 'Phú Đô - Nam Từ Liêm - Hà Nội', '13/09/1996', '0946278350', 'Nam', 'tranvananuet@gmail.com', 'herolhp96@gmail.com', 'fb.com/abc', '$2y$10$.kX/yHSOoxpYdcc50NXRB.9lHjxiT7QbAguCWGcFRWF3ZcEvlDluu', '123.jpg', NULL, '2017-06-27 18:51:15', '2017-06-27 18:57:32');
+INSERT INTO `users` (`id`, `level`, `lastName`, `name`, `address`, `birthday`, `phone`, `gender`, `email`, `other_email`, `facebook`, `password`, `image_avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 1, 'An', 'Trần Văn An', 'Phú Đô - Nam Từ Liêm - Hà Nội', '13/09/1996', '0946278350', NULL, 'tranvananuet@gmail.com', 'herolhp96@gmail.com', 'fb.com/abc', '$2y$10$.kX/yHSOoxpYdcc50NXRB.9lHjxiT7QbAguCWGcFRWF3ZcEvlDluu', '1498875416.jpg', '0cgjJC6QazABxqQeuQcEhhQJlH518htKKffyMneCa5tkAbUQHqByTzsI64oz', '2017-06-27 18:51:15', '2017-06-30 19:16:56'),
+(2, 2, 'Anh', 'Nguyễn Văn Mạnh', 'giao thủy', NULL, '0914395317', NULL, 'herolhp96@gmail.com', NULL, NULL, '$2y$10$/EhhoIOFQyy7Cd3E2pcY0.hMbG2f08APHTbjSrLiywsOBZcC8Ez2C', '1498826516.jpg', 'lnchGmpY6oF7tliKcvSvOjz67shqrXIjDbuMLUdEFiJGCW2MODHKDxcChUE7', '2017-06-30 04:48:56', '2017-07-03 09:06:45'),
+(3, 3, 'Công', 'Đặng Hữu Công', 'Liên Bang Nga', '12/2/1986', '0987654321', 'Nam', '123@gmail.com', NULL, NULL, '$2y$10$w1JFORhhAxs2hAJZ1oQLxegKu1z8sqV3QNihN0SYJL52UyZJgWzja', '1499039066.jpg', 'JPIY7oBGLheHrwRRCZQZ3oKPTsdli8BGrd2KgUkFXTKYZVqfYM6y2muxwjQC', '2017-06-30 21:36:47', '2017-07-02 16:44:26'),
+(4, 3, 'hưng', 'trần hưng', 'Nghĩa Hưng', NULL, '0914395317', NULL, 'antv96nd@gmail.com', NULL, NULL, '$2y$10$4tjjKZzIgUNGuFO81xllrOgfjdR7/6bkh4BE3tx2ZPacT0SeCZO.e', NULL, '0UhLLBLLuTAQ6EEkWSEwaYV3IsZmem0ig0U3eilcehyyTHhS0TM7fvREqauP', '2017-07-01 02:00:28', '2017-07-01 02:00:28'),
+(5, 3, 'Châu', 'Cao Thái Châu', 'Trà Vinh', NULL, '04862493357', NULL, 'chau@gmail.com', NULL, NULL, '$2y$10$FDwJVhvWX1FJThUX4pVMU.7aMKk8/mdzu/nod8IHaGW80G/eOJHxW', NULL, NULL, '2017-07-04 22:52:35', '2017-07-04 22:52:35');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `categories`
+-- Indexes for table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `contacts`
+-- Indexes for table `contacts`
 --
 ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `customers`
+-- Indexes for table `customers`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `locations`
+-- Indexes for table `locations`
 --
 ALTER TABLE `locations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `order_details`
+-- Indexes for table `order_details`
 --
 ALTER TABLE `order_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `password_resets`
+-- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Chỉ mục cho bảng `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `promotions`
+-- Indexes for table `promotions`
 --
 ALTER TABLE `promotions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `categories`
+-- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT cho bảng `contacts`
+-- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT cho bảng `customers`
+-- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
--- AUTO_INCREMENT cho bảng `locations`
+-- AUTO_INCREMENT for table `locations`
 --
 ALTER TABLE `locations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT cho bảng `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 --
--- AUTO_INCREMENT cho bảng `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
--- AUTO_INCREMENT cho bảng `order_details`
+-- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
--- AUTO_INCREMENT cho bảng `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
--- AUTO_INCREMENT cho bảng `promotions`
+-- AUTO_INCREMENT for table `promotions`
 --
 ALTER TABLE `promotions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
