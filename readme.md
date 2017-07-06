@@ -28,6 +28,6 @@ http://zodiacrestaurant.hol.es/
 ## Import Database
 - Tạo một database, import file ```restaurant_db.sql```.
 - Sửa cấu hình trong file ```env``` và ```config/database.php``` 
-<li>DB_DATABASE= tên database</li>
-<li>DB_USERNAME=tên người dùng đc quyền truy cập database</li>
-<li>DB_PASSWORD= mật khẩu người dùng được quyền truy cập database</li>
+    <li>DB_DATABASE= tên database</li>
+    <li>DB_USERNAME=tên người dùng đc quyền truy cập database</li>
+    <li>DB_PASSWORD= mật khẩu người dùng được quyền truy cập database</li>
