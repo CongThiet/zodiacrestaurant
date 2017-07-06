@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2017 at 07:35 AM
+-- Generation Time: Jul 06, 2017 at 07:56 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -73,7 +73,8 @@ INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `message`, `status`, `cr
 (4, 'AVX', 'loveforever827@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-03 03:05:13', '2017-07-03 10:55:05'),
 (5, 'Dương Công Minh', 'loveforever827@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-03 03:05:33', '2017-07-03 09:58:22'),
 (6, 'Hải Phòng', 'herolhp@gmail.com', '0914395317', 'Đây là hoá chất cực độc, là chất tẩy rửa dùng trong công nghiệp. Hoá chất này không được phép dùng trong y tế. Hoá chất này rất độc, nếu ngấm vào máu có thể lập tức gây tử vong. Nồng độ hoá chất này rất nặng. Thậm chí với số lượng lớn có thể gây mục xương trong thời gian ngắn.\r\n\r\nTrước đó, khoảng 8 giờ ngày 29/5, tại Khoa Thận nhân tạo, BV Đa khoa Hòa Bình, 18 bệnh nhân đang chạy thận nhân tạo bất ngờ xuất hiện triệu chứng của sốc phản vệ, 8 người tử vong sau đó.', 'đã xem', '2017-07-04 08:47:54', '2017-07-04 23:21:47'),
-(7, 'Hải Phòng', 'antv96nd@gmail.com', '12312312312312312312312312', '1213123', 'chưa xem', '2017-07-05 19:39:26', '2017-07-05 19:39:26');
+(7, 'Hải Phòng', 'antv96nd@gmail.com', '12312312312312312312312312', '1213123', 'chưa xem', '2017-07-05 19:39:26', '2017-07-05 19:39:26'),
+(8, 'Cao Thái Châu', 'herolhp@gmail.com', '04862493357', 'Còn nhớ ở mùa hè 2016, MU từng gây sốc khi mua lại Paul Pogba từ Juventus với giá 89,3 triệu bảng (105 triệu euro). Để rồi sau đó, “Quỷ đỏ” hoàn tất kỳ chuyển nhượng với 3 tân binh nữa là Ibrahimovic, Bailly và Mkhitaryan.\r\n\r\nCuối mùa, MU đoạt “cú ăn 3” và hiện tại tất cả đều hy vọng vào những chính sách chuyển nhượng của Mourinho ở mùa giải năm nay sẽ giúp đội bóng tìm lại ánh hào quang đã mất tại đấu trường Champions League.\r\n\r\nTuy nhiên, vấn đề khá nghiêm trọng là MU đang bị ép giá trong vụ mua Alvaro Morata, Matic, Perisic, Fabinho, nên tốc độ đang chậm hơn so với chờ đợi của HLV Mourinho.  Mặc dù vậy, theo những nguồn tin loan báo, MU thực tế đang “nắm đằng chuôi” sau khi đồng loạt những mục tiêu chính của “Quỷ đỏ” trong mùa hè này đang nằng nặc đòi chia tay đội bóng cũ để tìm đến “Nhà hát của những giấc mơ”.', 'chưa xem', '2017-07-05 22:56:04', '2017-07-05 22:56:04');
 
 -- --------------------------------------------------------
 
@@ -538,7 +539,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `customers`
 --
