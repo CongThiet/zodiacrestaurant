@@ -1,9 +1,14 @@
-@extends('layouts.layout')
+@extends('layouts.master')
 @section('nav')
 	@include('layouts.nav')
 @endsection
 @section('content')
 <div class="top-banner relative">
+         @if(session('orderfail'))
+            <div class="alert alert-danger noti" role="alert">
+                <strong>{{session('orderfail')}}</strong>
+            </div>
+        @endif
         @if(session('noti'))
             <div class="alert alert-success noti" role="alert">
                 <strong>{{session('noti')}}</strong>
@@ -29,27 +34,27 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <a href="">
-                                    <img class="slide-image" style="height: 450px;" src="../../admin/images/images-promotion/tinh-hoa-am-thuc-viet.jpg" alt="">
+                                    <img class="slide-image" style="height: 450px;" src="{{asset('/admin/images/images-promotion/tinh-hoa-am-thuc-viet.jpg')}}" alt="">
                                 </a>
                             </div>
                             <div class="item">
                                 <a href="">
-                                    <img class="slide-image" style="height: 450px;" src="../../admin/images/images-promotion/cafe-12k.jpg" alt="">
+                                    <img class="slide-image" style="height: 450px;" src="{{asset('/admin/images/images-promotion/cafe-12k.jpg')}}" alt="">
                                 </a>
                             </div>
                             <div class="item ">
                                 <a href="">
-                                    <img class="slide-image" style="height: 450px;" src="../../admin/images/images-promotion/bun-bo-25k.jpg" alt="">
+                                    <img class="slide-image" style="height: 450px;" src="{{asset('/admin/images/images-promotion/bun-bo-25k.jpg')}}" alt="">
                                 </a>
                             </div> 
                             <div class="item">
                                 <a href="">
-                                    <img class="slide-image" style="height: 450px;" src="../../admin/images/images-promotion/combo-re.jpg" alt="">
+                                    <img class="slide-image" style="height: 450px;" src="{{asset('/admin/images/images-promotion/combo-re.jpg')}}" alt="">
                                 </a>
                             </div>
                             <div class="item">
                                 <a href="">
-                                    <img class="slide-image" style="height: 450px;" src="../../admin/images/images-promotion/mua-1-tang-1.jpg" alt="">
+                                    <img class="slide-image" style="height: 450px;" src="{{asset('/admin/images/images-promotion/mua-1-tang-1.jpg')}}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -64,8 +69,8 @@
 
                     </div>
                     <div class="input-order-location relative">
-                        <a class="input-order" href="../../#menu"><h4>Đặt món</h4></a>
-                        <a class="input-location" href="../../location"><h4>Địa điểm</h4></a>                              
+                        <a class="input-order" href="{{route('home')}}/#menu"><h4>Đặt món</h4></a>
+                        <a class="input-location" href="{{route('location')}}"><h4>Địa điểm</h4></a>                              
                     </div>
                 </div>
 			</div>
@@ -80,7 +85,7 @@
                         <ul class="col-sm-12 list-item" id="sub-header">
                             @foreach($category as $category)
                                 <li class="col-sm-2 list-item-menu" >
-                                    <a style="color: #d8ffcc;" href="../../category/{{$category->id}}/#menu"><h4><strong>{{$category->category}} </strong></h4></a>
+                                    <a style="color: #d8ffcc;" href="{{route('category',['category'=>$category->id])}}/#menu"><h4><strong>{{$category->category}} </strong></h4></a>
                                 </li>
                             @endforeach
                         </ul>
@@ -97,7 +102,7 @@
                         <div class="caption">
                             <h4>{{$item->productName}} </h4>
                             <h4 class="pull-right">{{number_format($item->price,1)}}00 VNĐ</h4>					
-                            <a href=" ../addToCartGoMenu/{{$item->id}}"><button class="btn btn-success" type="submit">Đặt món</button></a>
+                            <a href="{{route('cart-add-gohome',['id'=>$item->id])}}"><button class="btn btn-success" type="submit">Đặt món</button></a>
                         </div>
                         <div class="ratings">
                             <p class="pull-right">15 reviews</p>

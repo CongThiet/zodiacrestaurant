@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 
 class LoginoutController extends Controller
 {
@@ -21,6 +22,7 @@ class LoginoutController extends Controller
         return redirect()->home()->with('noti','Đăng nhập thành công!!!');
     }
     public function destroy(){
+        Session::flush();
         auth()->logout();
         return redirect()->home();        
     }

@@ -20,7 +20,9 @@ class CreateOrdersTable extends Migration
             $table->date('orderDate');
             $table->double('totalPrice');
             $table->string('payment');
-            $table->text('note')->nullable();        
+            $table->text('note')->nullable(); 
+            $table->string('status')->default('Đặt hàng');
+            $table->string('nameShip')->nullable();
             $table->timestamps();
         });
     }

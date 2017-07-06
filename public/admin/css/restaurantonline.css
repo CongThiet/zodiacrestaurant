@@ -1,5 +1,5 @@
 body {
-    padding-top: 70px;
+    padding-top: 55px;
 }
 
 .slide-image {
@@ -115,7 +115,7 @@ footer {
 }
 
 .top-banner {
-    margin-top: 30px;
+    margin-top: 45px;
 }
 
 .about-us {
@@ -176,7 +176,7 @@ ul li {
 }
 
 .drop-menu {
-    background: #36583b;
+    background: #54af58;
 }
 
 .date_order {
@@ -185,12 +185,32 @@ ul li {
 }
 
 .drop-nav {
-    width: 177px;
+    width: 189px;
+}
+
+.dropdown-user a {
+    color: #555;
+    background-color: #54af58!important;
+}
+
+.dropdown-user a:focus {
+    color: #555;
+    background-color: #54af58!important;
 }
 
 .list-order-user {
     margin-bottom: 20px;
     margin-top: 0px
+}
+
+.list-order-user i {
+    margin-left: 50px;
+}
+
+.paginate-link {
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
 }
 
 
@@ -352,6 +372,10 @@ ul li {
     vertical-align: text-bottom;
 }
 
+.box-head {
+    padding-top: 35px;
+}
+
 .box-head h4 {
     margin: 0;
     padding: 20px;
@@ -409,9 +433,14 @@ ul li {
     z-index: 100;
 }
 
-.active a {
-    background: #ffa200!important;
+.select-info a {
+    background: #ffa200;
 }
+
+
+/*.active a {
+    background: #ffa200!important;
+}*/
 
 .tab-list {
     margin-left: 15px;
@@ -436,9 +465,9 @@ ul li {
 
 /*PROFILE*/
 
-.box-profile {
+.box-page {
     background: #efebe4;
-    margin-top: 36px;
+    padding-top: 36px;
 }
 
 .profile-user-img {
@@ -518,8 +547,6 @@ ul li {
     margin-top: 40px;
 }
 
-.box-content img {}
-
 .promo-img {
     width: 292px;
     height: 270px;
@@ -584,6 +611,96 @@ ul li {
 }
 
 
+/*ADMIN*/
+
+.box-order {
+    min-height: 500px;
+    margin-top: 50px;
+}
+
+.order-today {
+    line-height: 30px;
+}
+
+.select-day h4 {
+    margin-left: -15px;
+}
+
+.btn-custom {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.contact-mail {
+    min-height: 500px;
+    margin-left: 50px;
+}
+
+.contact-see {
+    margin-top: 50px;
+    /*margin-left: 50px;*/
+}
+
+.contact-button {
+    right: 328px;
+    position: absolute;
+    margin-top: -35px;
+}
+
+.contact-message {
+    white-space: nowrap;
+    /*width: 200px;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-message a {
+    text-decoration: none;
+    background: none!important;
+    color: #000;
+}
+
+.contact-message a:hover {
+    color: #e0474d;
+}
+
+.contact-del {
+    position: absolute;
+    top: -60px;
+    z-index: 100;
+}
+
+.contact-success {
+    display: inline-flex;
+    margin-top: 70px;
+    margin-right: 70px;
+}
+
+.contact-success a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.select-all-check {
+    width: 138%;
+}
+
+.mangager-highcharts {
+    min-height: 600px;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+.nav-contact {
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.box-order h4 {
+    text-transform: none;
+}
+
+
 /*FOOTER*/
 
 .footer-company,
@@ -605,5 +722,36 @@ ul li {
     .top-banner {
         height: 0px;
         padding-bottom: 125%;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .contact-see {
+        display: -webkit-inline-box;
+        margin-left: -50px;
+    }
+    .contact-button {
+        right: -19px;
+        position: absolute;
+        top: 53px;
+    }
+    .contact-message {
+        white-space: nowrap;
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .contact-name {
+        white-space: nowrap;
+        width: 129px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .select-all-check {
+        width: 100%;
+    }
+    .nav-contact {
+        display: inline-flex;
     }
 }

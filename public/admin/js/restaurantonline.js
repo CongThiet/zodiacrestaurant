@@ -63,3 +63,23 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     };
 };
+(function($) {
+    // Checkbox toggle function for selecting all checkboxes on the page
+    $.fn.toggleCheckboxes = function() {
+        // Get all checkbox elements
+        checkboxes = $(':checkbox').not(this);
+
+        // Check if the checkboxes are checked/unchecked and if so uncheck/check them
+        if (this.is(':checked')) {
+            checkboxes.prop('checked', true);
+        } else {
+            checkboxes.prop('checked', false);
+        }
+    }
+}(jQuery));
+$('#select_all').change(function() {
+    $(this).toggleCheckboxes();
+});
+$('#selectAll').change(function() {
+    $(this).toggleCheckboxes();
+});

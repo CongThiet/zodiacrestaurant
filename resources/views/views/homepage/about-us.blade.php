@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="col-md-12">
                     <h3 class="text-center"><strong>ZODIAC - RESTAURANT</strong></h3>
-                    <img class="img-logo" src="../../admin/images/images/logo.png" alt="">
+                    <img class="img-logo" src="{{asset('/admin/images/images/logo.png')}}" alt="logo">
                     <br>
                     <p> Thương hiệu nổi tiếng ZODIAC của chúng tôi là chuỗi nhà hàng ăn tại chỗ, cung cấp thức ăn Việt Nam an toàn sức khỏe, hương vị hoàng gia, thường được xem như là đặc trưng ẩm thực NAM ĐỊNH.
                         Chúng tôi phục vụ món ăn bằng cách sử dụng công thức nấu ăn bí mật gia truyền của chúng tôi . 

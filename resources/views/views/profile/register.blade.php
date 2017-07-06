@@ -1,14 +1,14 @@
-@extends('layouts.layout')
+@extends('layouts.master')
 @section('nav')
 <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-	<div class="container">
+	<div class="col-md-12 relative">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header page-scroll">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 				<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
 			</button>
-			<img class="navbar-brand" src="../../admin/images/images/logo.png" alt="">
-			<a class="navbar-brand page-scroll" href="../../"><strong>ZODIAC</strong> </a>
+			<img class="navbar-brand" src="{{asset('/admin/images/images/logo.png')}}" alt="">
+			<a class="navbar-brand page-scroll" href="{{route('home')}}"><strong>ZODIAC</strong> </a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,13 +18,19 @@
 					<a href="#page-top"></a>
 				</li>
 				<li>
-					<a class="page-scroll" href="../../#1"><strong>Giới thiệu</strong></a>
+					<a class="page-scroll" href="{{route('home')}}/#1"><strong>Giới thiệu</strong></a>
 				</li>
 				<li>
-					<a class="page-scroll" href="../../#menu"><strong>Thực đơn</strong></a>
+					<a class="page-scroll" href="{{route('home')}}/#menu"><strong>Thực đơn</strong></a>
 				</li>
 				<li>
-					<a class="page-scroll" href="../../#5"><strong>Liên Hệ</strong></a>
+					<a class="page-scroll" href="{{route('home')}}/location"><strong>Địa điểm</strong></a>
+				</li>
+				<li>
+					<a class="page-scroll " href="{{route('home')}}/promotion"><strong>Khuyến mãi</strong></a>
+				</li>
+				<li>
+					<a class="page-scroll" href="{{route('home')}}/#5"><strong>Liên Hệ</strong></a>
 				</li>
 			</ul>
 		</div>
@@ -34,28 +40,28 @@
 </nav>
 @endsection
 @section('content')
-<div class="col-md-12" style ="background:#efebe4;">
+<div class="col-md-12 box-page">
 	<div class="container">
 		<div class="row">
 			<div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 				<div class="panel panel-info">
 					<div class="panel-heading">
 						<div class="panel-title">Đăng kí</div>
-						<div  id="signinlink"><a href="../../login">Đăng nhập ngay</a></div>						
+						<div  id="signinlink"><a href="{{route('login')}}">Đăng nhập ngay</a></div>						
 					</div>  
 					<div class="panel-body" >
-						 <form class="form-horizontal" action ='../../register' method ='POST' accept-charset='utf-8' >
+						 <form class="form-horizontal" action ="{{route('register')}}" method ='POST' accept-charset='utf-8' >
 						 {{ csrf_field() }}
 						 	<div class="form-group">
 								<label for="lastName" class="col-md-3 control-label">Tên</label>
 								<div class="col-md-9">
 									<input type="text" class="form-control" name="lastName" placeholder="Tên người dùng. VD: An,Cúc" >
 								</div>
-									@if($errors->has('lastName'))
-                                         <label class="col-md-9 errors-signin ">
-                                            <strong>{{$errors->first('lastName')}}</strong>
-                                        </label>
-                                @endif
+								@if($errors->has('lastName'))
+										<label class="col-md-9 errors-signin ">
+										<strong>{{$errors->first('lastName')}}</strong>
+									</label>
+								@endif
 							</div>
 							<div class="form-group">
 								<label for="name" class="col-md-3 control-label">Họ và Tên</label>

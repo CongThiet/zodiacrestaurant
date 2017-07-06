@@ -9,7 +9,6 @@ class UserController extends Controller
 {
     public function viewInforUser(){
         return view('views.profile.profile');
-        
     }
     public function edit(){
         return view('views.profile.editprofile');  
@@ -18,12 +17,14 @@ class UserController extends Controller
         $this->validate(request(),[
                 'name'=>'required',
                 'address'=>'required',
-                'phone'=>'required|min:8|max:16'
+                'phone'=>'required|min:8|max:16',
+                'phone'=>'numeric',
             ],
             [
                 'name.required'=>'Vui lòng nhập tên.',
                 'address.required'=>'Vui lòng nhập địa chỉ.',
                 'phone.required'=>'Vui lòng nhập số điện thoại.',
+                'phone.numeric'=>'Số điện thoại không đúng định dạng',
                 'phone.min'=>'Số điện thoại của bạn tối thiểu 8 kí tự.',
                 'phone.max'=>'Số điện thoại của bạn quá dài.',
             ]);
@@ -31,6 +32,7 @@ class UserController extends Controller
         if($request->image_avatar){
             $user->image_avatar = time().'.'.$request->image_avatar->getClientOriginalExtension();
             $request->image_avatar->move('admin/images/images-avatar', $user->image_avatar);
+            // $request->image_avatar->move(public_path('admin/images/images-avatar'), $user->image_avatar);
         }
         $user->lastName = $request->lastName;
         $user->name = $request->name;

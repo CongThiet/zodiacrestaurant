@@ -16,7 +16,8 @@ class RegistrationController extends Controller
                 'name'=>'required',
                 'address'=>'required',
                 'phone'=>'required|min:8|max:16',
-                'email'=>'required|email',
+                'phone'=>'numeric',
+                'email'=>'required|email|unique:users',
                 'password'=>'required|min:6|max:20|confirmed'
             ],
             [
@@ -24,16 +25,17 @@ class RegistrationController extends Controller
                 'name.required'=>'Vui lòng điền đầy đủ họ và tên.',
                 'address.required'=>'Vui lòng điền địa chỉ',
                 'phone.required'=>'Vui lòng điền số điện thoại',
+                'phone.numeric'=>'Số điện thoại không đúng định dạng',
                 'phone.min'=>'Số điện thoại bạn quá ngắn tối thiểu 8 số.',
                 'phone.max'=>'Số điện thoại bạn quá dài.',
                 'email.required'=>'Vui lòng điền địa chỉ email.',
                 'email.email'=>'Địa chỉ email không đúng định dạng.',
+                'email.unique'=>'Địa chỉ email của bạn đã được sử dụng',
                 'password.required'=>'Bạn chưa điền password.',
                 'password.min'=>'Mật khẩu của bạn tối thiểu 6 kí tự.',
                 'password.max'=>'Mật khẩu của bạn tối đa 20 kí tự.',
                 'password.confirmed'=>'Xác nhận mật khẩu không đúng.'
             ]);
-            // 'email.unique'=>'Địa chỉ email của bạn đã được sử dụng',
         $user = User::create([
             'lastName'=>request('lastName'),
             'name'=>request('name'),

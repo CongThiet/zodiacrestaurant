@@ -30,8 +30,16 @@
 
 
 <!-- JS -->>
-<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="{{asset('/node_modules/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../admin/js/restaurantonline.js"></script>
+<script src="{{asset('/node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('/admin/js/restaurantonline.js')}}"></script>
+<script src="{{asset('/node_modules/datepicker/bootstrap-datepicker.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script> --}}
+
+<script>
+	$('#datepicker').datepicker({
+		autoclose: true
+	});
+</script>

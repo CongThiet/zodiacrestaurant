@@ -1,8 +1,8 @@
-@extends('layouts.layout')
+@extends('layouts.master')
 @section('nav-custom')
     @include('layouts.nav-custom')
 @section('content')
-<div class="container-fluid relative" style ="background:#efebe4;">
+<div class="container-fluid box-page relative">
     @if(session('notification'))
         <div class="alert alert-success notification">
             <strong>{{session('notification')}}</strong>
@@ -45,19 +45,19 @@
                             <td class="col-sm-2 col-md-2 text-center">{{number_format($product['item']['price'],1)}}00 VNĐ</td>
                             <td class="col-sm-2 col-md-2 text-right"><strong>{{number_format($product['price'],1)}}00 VNĐ</strong></td>
                             <td class="col-sm-2 col-md-2">
-                            <a href="../../addToCartGoCart/{{$product['item']->id}}" class="">
+                            <a href="{{route('cart-add',['id'=>$product['item']->id])}}" class="">
                                     <button type="button" class="btn btn-success">
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </button>
                                 </a>
-                                <a href="../../removeOneCart/{{$product['item']->id}}" class="">
+                                <a href="{{route('cart-remove-one',['id'=>$product['item']->id])}}" class="">
                                     <button type="button" class="btn btn-success">
                                         <i class="fa fa-minus" aria-hidden="true"></i>
                                     </button>
                                 </a>
                             </td>
                             <td class="col-sm-2 col-md-2">
-                                <a href=" ../../removeAllGoCart/{{$product['item']->id}}" onclick="return confirm('Bạn có muốn xóa đơn hàng này ra khỏi thực đơn của bạn?');">
+                                <a href="{{route('cart-remove-all',['id'=>$product['item']->id])}}" onclick="return confirm('Bạn có muốn xóa đơn hàng này ra khỏi thực đơn của bạn?');">
                                     <button type="button" class="btn btn-danger">
                                         <i class="fa fa-close" aria-hidden="true"></i></span>
                                     </button>
@@ -95,12 +95,11 @@
                         </tr>
                     </tfoot>
                 </table>
-                <form class="form-horizontal" role="form" action ='../../order' method ='POST' accept-charset='utf-8'>
+                <form class="form-horizontal" role="form" action ="route('order')" method ='POST' accept-charset='utf-8'>
                                 {{ csrf_field() }}
                     <div class="col-md-6">
                         <h4><strong>Thông tin giao hàng</strong></h4>
                         <div class="space">&nbsp;</div>
-                        
                         <div class="form-group">
                             <label for="name">Họ tên*</label>
                             <input type="text" id="name" name ="name" class="form-control" placeholder="Họ tên" >
@@ -110,17 +109,11 @@
                                         </label>
                             @endif
                         </div>
-
                         <div class="form-group">
                             <label>Giới tính </label>
                             <input id="gender" type="radio" class="input-radio" name="gender" value="Nam" checked="checked" style="width: 10%"><span style="margin-right: 10%">Nam</span>
                             <input id="gender" type="radio" class="input-radio" name="gender" value="Nữ" style="width: 10%"><span>Nữ</span>
                         </div>
-
-                        @if(Auth::check())
-                            <input type="hidden" id="user_id" name="user_id" value = "{{Auth::user()->id}}">
-                        @endif
-
                         <div class="form-group">
                             <label for="adress">Địa chỉ*</label>
                             <input type="text" id="address" class="form-control" name="address" placeholder="Địa chỉ" >
@@ -130,8 +123,6 @@
                                 </label>
                             @endif         
                         </div>
-                        
-
                         <div class="form-group">
                             <label for="phone">Điện thoại*</label>
                             <input type="text" id="phone" class="form-control" name="phone" placeholder="Số điện thoại" >
@@ -185,14 +176,12 @@
                         @else
                             <div>
                                 <span> <strong>Bạn cần đăng nhập để có thể đặt hàng</strong></span><br>
-                                <span><a href="../../login">Đăng nhập ngay</a></span>
+                                <span><a href="{{route('login')}}">Đăng nhập ngay</a></span>
                             </div>
                             <button type="submit" class="btn btn-primary" style="margin-top: 3px;">Đặt hàng 
                                     <i class="fa fa-chevron-right"></i>
                             </button>
                         @endif
-                        {{-- @include('layouts.errors') --}}
-                        
                     </div>
                 </form>
             </div>
@@ -205,7 +194,7 @@
                         <p>Xin vui lòng đặt món</p>
                         <p>Ấn vào đây để tiếp tục mua sắm</p>
                         </strong>
-                        <a href="../../#menu" style="text-decoration: none;">
+                        <a href="{{route('home')}}/#menu" style="text-decoration: none;">
                             <button type="button" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-shopping-cart"></span>Thực đơn
                             </button>
@@ -214,7 +203,6 @@
                 
                 </div>
             @endif
-
         </div>
     </div>
 </div>

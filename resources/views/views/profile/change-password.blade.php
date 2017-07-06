@@ -1,9 +1,9 @@
-@extends('layouts.layout')
+@extends('layouts.master')
 @section('nav-custom')
     @include('layouts.nav-custom')
 @endsection
 @section('content')
-<div class="col-sm-12 box-profile">
+<div class="col-sm-12 box-page">
 	<div class="container">
         <div class="row">
             <div class="box-head">
@@ -12,17 +12,17 @@
             <div class="row show-info">
                 <ul class="nav nav-tabs tab-list" >
                     <li role="presentation">
-                        <a href="../../profile"><strong>Thông tin cá nhân</strong></a>
+                        <a href="{{route('profile')}}"><strong style="color: #2d2525;">Thông tin cá nhân</strong></a>
                     </li>
                     <li role="presentation">
-                        <a href="../../profile/edit"><strong>Chỉnh sửa thông tin</strong></a>
+                        <a href="{{route('profile-edit')}}"><strong style="color: #2d2525;">Chỉnh sửa thông tin</strong></a>
                     </li>
-                    <li role="presentation" class="active">
-                        <a href="../../profile/change-password" ><strong>Thay đổi mật khẩu</strong></a>
+                    <li role="presentation" class="select-info">
+                        <a href="{{route('profile-change-password')}}" ><strong style="color: #2d2525;">Thay đổi mật khẩu</strong></a>
                     </li>
                 </ul>
                     <div class="tab-pane container">
-                        <form class="form-horizontal change-password" role="form" action ='../../profile/update-password/{{Auth::user()->id}}' method ='POST' accept-charset='utf-8'>
+                        <form class="form-horizontal change-password" role="form" action ="{{route('profile-update-password',['user'=>Auth::user()->id])}}" method ='POST' accept-charset='utf-8'>
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <div class="form-group">

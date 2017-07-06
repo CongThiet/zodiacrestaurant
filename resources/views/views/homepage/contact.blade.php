@@ -5,7 +5,7 @@
                 </div>
             <div class="row">
                 <div class="col-md-12">
-                    <form name="sentMessage" id="contactForm" novalidate action ='../../contactus' method ='POST' accept-charset='utf-8'>
+                    <form name="sentMessage" id="contactForm" novalidate action ="{{route('contactus')}}" method ='POST' accept-charset='utf-8'>
                     {{ csrf_field() }}
                         <div class="row">
                             <div class="col-md-6">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Session;
 use App\Cart;
 use App\Product;
@@ -15,50 +16,46 @@ class CartController extends Controller
 {   
     public function  __construct()
     {
-        $this->middleware('auth')->except ('getToCartGoMenu','getToCartGoCart','removeOneCart','removeAllGoCart','removeAllGoMenu','index');
-    
+        $this->middleware('CheckOrderLevel')->except('index','viewOrderDetail');
     }
-
-
     public function index(){
         return view('views.cart.cart');
     }
 
     public function viewOrder(User $user){
-        $orders = Order::where('user_id',$user->id)->latest()->paginate(5);
-        return view('views.profile.viewOrder',compact('orders'));
-        
+        $orders = Order::where('user_id',$user->id)->latest()->paginate(4);
+        return view('views.order.view-order',compact('orders'));
     }
-    public function viewOrderId(User $user, Order $order){
+    public function viewOrderDetail(Order $order){
         $order_details = DB::table('order_details')->join('products','products.id','=','order_details.product_id')
                         ->where('order_id','=' ,$order->id)
                         ->get();
         $customers = Customer::where('id',$order->customer_id)->get();
-        return view('views.profile.viewOrderId',compact('order','order_details','customers'));
+        return view('views.order.view-order-detail',compact('order','order_details','customers'));
         
     }
     // add cart -> redirect go home
-    public function getToCartGoMenu(Request $request, $id){
+    public function addCartGoMenu(Request $request, $id){
         $product = Product::find($id);
         $oldCart = Session::has('cart')?Session::get('cart'):null;
         $cart = new Cart($oldCart);
         $cart->addToCart($product, $id);
         $request->session()->put('cart',$cart);
         return redirect('../../#menu');
-        // return redirect()->back();
         
     }
      // add cart -> redirect go cart
-    public function getToCartGoCart(Request $request, $id){
+    public function addCartGoCart(Request $request, $id){
         $product = Product::find($id);
         $oldCart = Session::has('cart')?Session::get('cart'):null;
         $cart = new Cart($oldCart);
         $cart->addToCart($product, $id);
         $request->session()->put('cart',$cart);
-        // return redirect('../../#menu');
         return redirect()->back();
         
     }
+
+    
     public function removeOneCart($id){
         $oldCart = Session::has('cart')?Session::get('cart'):null;        
         $cart = new Cart($oldCart);
@@ -99,7 +96,7 @@ class CartController extends Controller
     }
 
 
-    public function store(Request $request){
+    public function store(){
         $this->validate(request(),[
             'name'=>'required',
             'address'=>'required',
@@ -112,50 +109,71 @@ class CartController extends Controller
             'phone.min'=>'Số điện thoại bạn quá ngắn tối thiểu 8 số.',
             'phone.max'=>'Số điện thoại bạn quá dài.'
             ]);
-        $customer = new Customer;
-        $customer->user_id = $request->user_id;
-        $customer->name = $request->name;
-        $customer->gender = $request->gender;
-        $customer->address = $request->address;
-        $customer->phone = $request->phone;
-        $customer->note = $request->note;
-        $customer->save();
-        // Customer::create(request([
-        //     'name',
-        //     'gender',
-        //     'email',
-        //     'address',
-        //     'phone_number',
-        //     'note'
-        // ]));
-        // Order::create([
-        //     'customer_id' => $customer->id,
-        //     'orderDate' => date('Y-m-d'),
-        //     'total' => $cart->totalPrice,
-        //     'payment' => request('payment_method'),
-        //     'note' => request('note')
-        // ]);
+        Customer::create([
+            'user_id'=>Auth::user()->id,
+            'name'=>request('name'),
+            'gender'=>request('gender'),
+            'address'=>request('address'),
+            'phone'=>request('phone'),
+            'note'=>request('note')
+        ]);
+
+        $customers = Customer::latest()->limit('1')->get();   //lastst() xếp theo created_at; orderByDesc('id','desc') xếp theo id
         $cart = Session::get('cart');
-        $order = new Order;
-        $order->user_id = $customer->user_id;
-        $order->customer_id = $customer->id;
-        $order->orderDate = date('Y-m-d');
-        $order->totalPrice = $cart->totalPrice;
-        $order->payment = $request->payment_method;
-        $order->note = $request->note;
-        $order->save();
-        // dd($cart);
+        foreach($customers as $customer){
+            Order::create([
+                'user_id'=>Auth::user()->id,
+                'customer_id'=>$customer->id,
+                'orderDate'=>date('Y-m-d'),
+                'totalPrice'=>$cart->totalPrice,
+                'payment'=>request('payment_method'),
+                'note'=>request('note')
+            ]);
+        }
+        
         foreach ($cart->items as $key => $value) {
-            $order_detail = new OrderDetail;
-            $order_detail->order_id = $order->id;
-            $order_detail->product_id = $value['item']['id'];
-            $order_detail->quantity = $value['quantity'];
-            $order_detail->price = ($value['price']/$value['quantity']);
-            $order_detail->save();
+            $orders = Order::latest()->limit('1')->get(); 
+            foreach($orders as $order){
+                OrderDetail::create([
+                    'order_id'=>$order->id,
+                    'product_id'=>$value['item']['id'],
+                    'quantity'=>$value['quantity'],
+                    'price'=>($value['price']/$value['quantity'])
+                ]);
+            }
         }
         Session::forget('cart');
         return redirect()->back()->with('notification','Đặt hàng thành công - Chúc bạn có một bữa ăn vui vẻ!!!');
+        // Cách 2 dùng Request $request
+        // $customer = new Customer;
+        // $customer->user_id = Auth::user()->id;
+        // $customer->name = $request->name;
+        // $customer->gender = $request->gender;
+        // $customer->address = $request->address;
+        // $customer->phone = $request->phone;
+        // $customer->note = $request->note;
+        // $customer->save();
 
+        // $cart = Session::get('cart');
+        // $order = new Order;
+        // $order->user_id = Auth::user()->id;
+        // $order->customer_id = $customer->id;
+        // $order->orderDate = date('Y-m-d');
+        // $order->totalPrice = $cart->totalPrice;
+        // $order->payment = $request->payment_method;
+        // $order->note = $request->note;
+        // $order->save();
+        // foreach ($cart->items as $key => $value) {
+            // $order_detail = new OrderDetail;
+            // $order_detail->order_id = $order->id;
+            // $order_detail->product_id = $value['item']['id'];
+            // $order_detail->quantity = $value['quantity'];
+            // $order_detail->price = ($value['price']/$value['quantity']);
+            // $order_detail->save();
+        // }
+        // Session::forget('cart');
+        // return redirect()->back()->with('notification','Đặt hàng thành công - Chúc bạn có một bữa ăn vui vẻ!!!');
+    
     }
-
+    
 }

@@ -1,9 +1,9 @@
-@extends('layouts.layout')
+@extends('layouts.master')
 @section('nav-custom')
     @include('layouts.nav-custom')
 @endsection
 @section('content')
-<div class="col-md-12 box-profile" >
+<div class="col-md-12 box-page" >
 	<div class="container">
         <div class="row">
             <div class="box-head">
@@ -12,29 +12,29 @@
             <div class="row show-info">
                 <ul class="nav nav-tabs tab-list">
                     <li role="presentation">
-                        <a href="../../profile"><strong>Thông tin cá nhân</strong></a>
+                        <a href="{{route('profile')}}"><strong style="color: #2d2525;">Thông tin cá nhân</strong></a>
                     </li>
-                    <li role="presentation" class="active">
-                        <a href="../../profile/edit"><strong>Chỉnh sửa thông tin</strong></a></a>
+                    <li role="presentation" class="select-info">
+                        <a href="{{route('profile-edit')}}"><strong style="color: #2d2525;">Chỉnh sửa thông tin</strong></a>
                     </li>
                     <li role="presentation">
-                        <a href="../../profile/change-password"><strong>Thay đổi mật khẩu</strong></a></a>
+                        <a href="{{route('profile-change-password')}}" ><strong style="color: #2d2525;">Thay đổi mật khẩu</strong></a>
                     </li>
                 </ul>
                 <div class="tab-pane container">
-                    <form class="form-horizontal update-info" role="form" action ='../../profile/update/{{Auth::user()->id}}' method ='POST' accept-charset='utf-8' enctype="multipart/form-data">
+                    <form class="form-horizontal update-info" role="form" action ="{{route('profile-update',['user'=>Auth::user()->id])}}" method ='POST' accept-charset='utf-8' enctype="multipart/form-data">
                         {{ method_field('PUT') }}
                         {{ csrf_field() }}
                             <div class="form-group">
                             @if( Auth::user()->image_avatar == null )
-                                <img class="profile-user-img-update img-responsive img-circle" src="../../admin/images/images-avatar/avatar-null.png" alt="User profile picture" style="width: 220px; height: 229px;" id="image">
+                                <img class="profile-user-img-update img-responsive img-circle" src="{{asset('/admin/images/images-avatar/avatar-null.png')}}" alt="User profile picture" style="width: 220px; height: 229px;" id="image">
                             @else
-                                <img class="profile-user-img-update img-responsive img-circle" src="../../admin/images/images-avatar/{{Auth::user()->image_avatar}}" style="width: 220px; height: 229px;" alt="User profile picture" id="image">
+                                <img class="profile-user-img-update img-responsive img-circle" src="{{asset('/admin/images/images-avatar')}}/{{Auth::user()->image_avatar}}" style="width: 220px; height: 229px;" alt="User profile picture" id="image">
                             @endif
                                 <label class="control-label col-sm-2" for="file">Ảnh đại diện:</label>
                                 <div class="col-sm-4">
                                         <div class="browsefile" title="Thay đổi Avater">Thay đổi
-                                            <input  id="file" type="file" name="image_avatar" accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);" value="../../admin/images/images-avatar/{{Auth::user()->image_avatar}}" >
+                                            <input  id="file" type="file" name="image_avatar" accept="image/jpg, image/jpeg, image/png" onchange="readURL(this);" value="{{asset('/admin/images/images-avatar')}}/{{Auth::user()->image_avatar}}" >
                                         </div>
                                 </div>
                             </div>
