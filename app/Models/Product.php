@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 // use Illuminate\Database\Eloquent\Model;
-use App\OrderDetail;
-use App\Category;
+use App\Models\OrderDetail;
+use App\Models\Category;
 
 
 class Product extends Model

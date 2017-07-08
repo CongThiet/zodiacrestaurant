@@ -9,7 +9,6 @@
             <h4>Liên lạc của khách hàng</h4>
         </div>
         <div class="row contact-mail relative" >
-        @foreach($contacts as $contactdetail)
             <div class="contact-detail">
                 <p style="font-size: 22px;"><strong >Họ Tên:</strong> {{$contactdetail->name}}</p>
                 <p><strong>Email:</strong> {{$contactdetail->email}}</p>
@@ -31,7 +30,6 @@
                             <i class="fa fa-chevron-right"></i>
                     </button>
             </div>
-        @endforeach
         </div>
     </div>
 </div>

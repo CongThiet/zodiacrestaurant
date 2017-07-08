@@ -49,20 +49,22 @@ $("#payment_method_cheque").click(function() {
     $("#content_atm").css("display", "block");
 });
 
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+// function readURL(input) {
+//     if (input.files && input.files[0]) {
+//         var reader = new FileReader();
 
-        reader.onload = function(e) {
-            $('#image')
-                .attr('src', e.target.result)
-                .width(220)
-                .height(229);
-        };
+//         reader.onload = function(e) {
+//             $('#image')
+//                 .attr('src', e.target.result)
+//                 .width(220)
+//                 .height(229);
+//         };
 
-        reader.readAsDataURL(input.files[0]);
-    };
-};
+//         reader.readAsDataURL(input.files[0]);
+//     };
+// };
+
+
 (function($) {
     // Checkbox toggle function for selecting all checkboxes on the page
     $.fn.toggleCheckboxes = function() {

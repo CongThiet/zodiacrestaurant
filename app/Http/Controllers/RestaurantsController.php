@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Product;
-use App\Category;
+use App\Models\Product;
+use App\Models\Category;
 use App\User;
-use App\Order;
-use App\Contact;
-use App\Promotion;
-use App\Location;
+use App\Models\Order;
+use App\Models\Contact;
+use App\Models\Promotion;
+use App\Models\Location;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 

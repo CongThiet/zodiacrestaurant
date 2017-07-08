@@ -47,7 +47,7 @@ body {
 
 
 /*.carousel-holder {
-    margin-bottom: 30px;
+margin-bottom: 30px;
 }*/
 
 .carousel-control,
@@ -188,9 +188,25 @@ ul li {
     width: 189px;
 }
 
+.dropdown-user {
+    margin-top: 7px;
+}
+
+.dropdown-user span {
+    color: #fafafa;
+}
+
+.dropdown-user span:hover {
+    color: #555;
+}
+
 .dropdown-user a {
     color: #555;
     background-color: #54af58!important;
+}
+
+.dropdown-user button {
+    background: #54af58;
 }
 
 .dropdown-user a:focus {
@@ -439,8 +455,12 @@ ul li {
 
 
 /*.active a {
-    background: #ffa200!important;
+background: #ffa200!important;
 }*/
+
+.tab-pane {
+    border: 1px solid #4caf50;
+}
 
 .tab-list {
     margin-left: 15px;
@@ -633,23 +653,9 @@ ul li {
 
 .contact-mail {
     min-height: 500px;
-    margin-left: 50px;
-}
-
-.contact-see {
-    margin-top: 50px;
-    /*margin-left: 50px;*/
-}
-
-.contact-button {
-    right: 328px;
-    position: absolute;
-    margin-top: -35px;
 }
 
 .contact-message {
-    white-space: nowrap;
-    /*width: 200px;*/
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -664,12 +670,6 @@ ul li {
     color: #e0474d;
 }
 
-.contact-del {
-    position: absolute;
-    top: -60px;
-    z-index: 100;
-}
-
 .contact-success {
     display: inline-flex;
     margin-top: 70px;
@@ -681,23 +681,120 @@ ul li {
     color: #fff;
 }
 
-.select-all-check {
-    width: 138%;
-}
-
-.mangager-highcharts {
-    min-height: 600px;
-    text-transform: uppercase;
-    margin-top: 50px;
-}
-
 .nav-contact {
     margin-top: 50px;
     text-transform: uppercase;
 }
 
+.manager-highcharts {
+    min-height: 450px;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
 .box-order h4 {
     text-transform: none;
+}
+
+.manager-menu h5 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.manager-menu {
+    text-transform: uppercase;
+}
+
+.thumbnail-image img {
+    -webkit-transform: scale(0.8);
+    /*Webkit: Scale down image to 0.8x original size*/
+    -moz-transform: scale(0.8);
+    /*Mozilla scale version*/
+    -o-transform: scale(0.8);
+    /*Opera scale version*/
+    -webkit-transition-duration: 0.5s;
+    /*Webkit: Animation duration*/
+    -moz-transition-duration: 0.5s;
+    /*Mozilla duration version*/
+    -o-transition-duration: 0.5s;
+    /*Opera duration version*/
+    width: 348px;
+    height: 348px;
+}
+
+.thumbnail-image img:hover {
+    -webkit-transform: scale(1.0);
+    /*Webkit: Scale up image to 1.2x original size*/
+    -moz-transform: scale(1.0);
+    /*Mozilla scale version*/
+    -o-transform: scale(1.0);
+    /*Opera scale version*/
+    -webkit-box-shadow: 0px 0px 30px gray;
+    /*Safari shadow version*/
+    -moz-box-shadow: 0px 0px 30px gray;
+    /*Mozilla shadow version*/
+    width: 348px;
+    height: 348px;
+}
+
+.product-control {
+    margin-left: 35%;
+}
+
+.product-caption {
+    margin-top: 35px;
+}
+
+.product-control button {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.product-caption input {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.box-search-null {
+    margin-top: 100px;
+}
+
+.table-menu a {
+    text-decoration: none;
+    color: #000;
+}
+
+.table-menu a:hover {
+    color: royalblue;
+}
+
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.btn-group .form-horizontal .btn[type="submit"] {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 500px;
+        margin: 0 auto;
+    }
 }
 
 
@@ -726,32 +823,41 @@ ul li {
     }
 }
 
-@media only screen and (max-width: 970px) {
-    .contact-see {
-        display: -webkit-inline-box;
-        margin-left: -50px;
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #fafdfa;
     }
-    .contact-button {
-        right: -19px;
-        position: absolute;
-        top: 53px;
+    .thumbnail-image img {
+        -webkit-transform: scale(0.8);
+        /*Webkit: Scale down image to 0.8x original size*/
+        -moz-transform: scale(0.8);
+        /*Mozilla scale version*/
+        -o-transform: scale(0.8);
+        /*Opera scale version*/
+        -webkit-transition-duration: 0.5s;
+        /*Webkit: Animation duration*/
+        -moz-transition-duration: 0.5s;
+        /*Mozilla duration version*/
+        -o-transition-duration: 0.5s;
+        /*Opera duration version*/
+        width: 268px;
+        height: 268px;
     }
-    .contact-message {
-        white-space: nowrap;
-        width: 150px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    .thumbnail-image img:hover {
+        -webkit-transform: scale(1.0);
+        /*Webkit: Scale up image to 1.2x original size*/
+        -moz-transform: scale(1.0);
+        /*Mozilla scale version*/
+        -o-transform: scale(1.0);
+        /*Opera scale version*/
+        -webkit-box-shadow: 0px 0px 30px gray;
+        /*Safari shadow version*/
+        -moz-box-shadow: 0px 0px 30px gray;
+        /*Mozilla shadow version*/
+        width: 268px;
+        height: 268px;
     }
-    .contact-name {
-        white-space: nowrap;
-        width: 129px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .select-all-check {
-        width: 100%;
-    }
-    .nav-contact {
-        display: inline-flex;
+    .product-control {
+        margin-left: 0;
     }
 }

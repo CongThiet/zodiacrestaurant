@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Order;
+use App\Models\Contact;
+use App\Models\OrderDetail;
+use App\Models\Product;
 use Carbon\Carbon;
-use App\Order;
-use App\Contact;
-use App\OrderDetail;
-use DB;
-use Charts;
+use ConsoleTVs\Charts\Facades\Charts;
+use Session;
 
 class AdminController extends Controller
 {
@@ -28,7 +29,7 @@ class AdminController extends Controller
 
     public function viewContact(){
         $contacts = Contact::where('status','chưa xem')->latest()->paginate(5);
-        $contactSeens = Contact::where('status','đã xem')->latest()->paginate(5);
+        $contactSeens = Contact::where('status','đã xem')->latest()->get();
         return view('views.admin.admin-contact',compact('contacts','contactSeens'));
     }
 
@@ -40,29 +41,33 @@ class AdminController extends Controller
         ]);
         $checkbox = $request->all();
         foreach($checkbox['checkbox'] as $id) {
-            Contact::where('id', $id)->delete();
+            Contact::find($id)->delete();
         }
         return redirect()->back()->with('contact-del','Liên lạc của khách hàng đã được xóa');
     }
 
-    public function viewContactDetail(Contact $contact){
-        $contacts = Contact::find($contact);
-        return view('views.admin.admin-contact-view',compact('contact','contacts'));
+    public function viewContactDetail($contact){
+        try{
+            $contactdetail = Contact::findOrFail($contact);
+        return view('views.admin.admin-contact-view',compact('contactdetail'));
+        }
+        catch(\Exception $e){
+           return \Response::view('errors.404',array(),404);
+        }
     }
 
-    public function contactDetailSeen(Contact $contact){
-        // $contacts = Contact::find($contact);
-        Contact::where('id',$contact->id)
+    public function contactDetailSeen($contact){
+        Contact::find($contact)
                 ->update(['status'=> 'đã xem']);
         return redirect(route('admin-contact'));
     }
 
 
     public function ordered(Order $order){
-        Order::where('id',$order->id)
+        Order::find($order->id)
                 ->update(['status'=> 'Đã nhận đơn hàng']);
         if($order->nameShip == null){
-            Order::where('id',$order->id)
+            Order::find($order->id)
                 ->update(['nameShip'=>Auth::user()->name]);
         }      
         return redirect(route('admin-order'));
@@ -77,15 +82,48 @@ class AdminController extends Controller
                 ->get();
         // // dd($products);
         $chart = Charts::create('pie', 'highcharts')
-             ->title('Sản phẩm được đặt hàng nhiều nhất')
-             ->elementLabel('My nice label')
-             ->labels($data->pluck('productName'))
-             ->values($data->pluck('total'))
-            //  ->dimensions(700,500)
-             ->responsive(false);
-            // dd($chart);
-        // return view('test', ['chart' => $chart]);
-        return view('views.admin.admin-managerment',['chart' => $chart]);
+                ->title('Sản phẩm được đặt hàng nhiều nhất')
+                ->elementLabel('My nice label')
+                ->labels($data->pluck('productName'))
+                ->values($data->pluck('total'))
+                // ->dimensions(700,500)
+                ->responsive(false);
+                //dd($chart);
+        $products = Product::paginate(10);
+
+        return view('views.admin.admin-managerment',['chart' => $chart], compact('products'));
     }
-  
+    public function managermentProduct($id){
+        try{
+            $products = Product::findOrFail($id);
+            return view('views.admin.admin-product', compact('products'));
+        }
+        catch(\Exception $e){
+           return \Response::view('errors.404',array(),404);
+        }
+    }
+    public function managermentProductUpdate(Request $request, $id){
+        $products = Product::find($id);
+        if($request->image_menu){
+            $products->image = $request->image_menu->getClientOriginalName();
+            $request->image_menu->move('admin/images/images-product', $products->image);
+        }
+        $products->productName = $request->productName;
+        $products->price = $request->price;
+        $products->save();
+        return redirect()->back();
+    }
+    public function managermentProductRemove($id){
+        Product::find($id)->delete();
+        return redirect(route('admin-managerment'));
+    }
+    public function productSearch(Request $request){
+        $search =$request->search;
+        $products = Product::where('productName', 'like',"%$search%")->get();
+        // dd($products);
+        session()->flash('products', $products);
+        dd(session('products'));
+        return redirect()->back();
+    }
+
 }

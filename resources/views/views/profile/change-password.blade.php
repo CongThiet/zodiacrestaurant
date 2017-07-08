@@ -39,7 +39,7 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="new_password">Mật khẩu mới:</label>
                                 <div class="col-sm-4">
-                                    <input type="password" class="form-control " id="new_password" name="new_password" value="" placeholder="nhập mật khẩu mới" required>
+                                    <input type="password" class="form-control " id="new_password" name="new_password" value="" placeholder="nhập mật khẩu mới" >
                                 </div>
                                 @if($errors->has('new_password'))
                                         <label class="col-sm-4 errors-password ">
@@ -50,7 +50,7 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-2" for="new_password_confirmation">Nhập lại mật khẩu mới:</label>
                                 <div class="col-sm-4">
-                                    <input type="password" class="form-control " id="new_password_confirmation" name="new_password_confirmation" placeholder="nhập lại mật khẩu mới" required>
+                                    <input type="password" class="form-control " id="new_password_confirmation" name="new_password_confirmation" placeholder="nhập lại mật khẩu mới" >
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary" style="margin-left: 43%;">Lưu</button>

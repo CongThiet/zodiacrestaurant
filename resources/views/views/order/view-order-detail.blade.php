@@ -44,6 +44,10 @@ endsection
                     <div class="space">&nbsp;</div>
                     <p>{{$order->payment}}</p>
                 </div>
+                <div class="order_note" style ="margin-top: 40px;">
+                    <h4><strong>Ghi chú</strong></h4>
+                    <p>{{$order->note}}</p>
+                </div>
             </div>
         </div>
         <table class="table table-hover table-bordered">

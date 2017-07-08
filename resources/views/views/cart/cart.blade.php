@@ -95,7 +95,7 @@
                         </tr>
                     </tfoot>
                 </table>
-                <form class="form-horizontal" role="form" action ="route('order')" method ='POST' accept-charset='utf-8'>
+                <form class="form-horizontal" role="form" action ="{{route('order')}}" method ='POST' accept-charset='utf-8'>
                                 {{ csrf_field() }}
                     <div class="col-md-6">
                         <h4><strong>Thông tin giao hàng</strong></h4>

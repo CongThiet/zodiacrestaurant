@@ -28,6 +28,10 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
         Route::get('/contact/{contact}', 'AdminController@viewContactDetail')->name('admin-contact-detail');
         Route::post('/contact/seen/{contact}', 'AdminController@contactDetailSeen')->name('admin-contact-seen');
         Route::get('/managerment', 'AdminController@manager')->name('admin-managerment');
+        Route::get('/product/control/{product}','AdminController@managermentProduct')->name('admin-product');
+        Route::put('/product/update/{product}','AdminController@managermentProductUpdate')->name('admin-product-update');
+        Route::post('/product/remove/{product}','AdminController@managermentProductRemove')->name('admin-product-remove');
+        Route::post('/product/search','AdminController@productSearch')->name('product-search');
     });
 });
 //cart

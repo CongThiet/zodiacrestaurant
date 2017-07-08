@@ -44,7 +44,7 @@ class UserController extends Controller
         $user->facebook = $request->facebook;
         $user->save();
         // $user->update($request->all();
-        return redirect('../../profile')->with('updated','Thông tin của bạn đã được cập nhật.');
+        return redirect(route('profile'))->with('updated','Thông tin của bạn đã được cập nhật.');
     }
     public function changePassword(){
         return view('views.profile.change-password');  
@@ -52,20 +52,22 @@ class UserController extends Controller
     public function changePasswordUpdate(Request $request, $id){
         if(!auth()->attempt(request(['password']))){
             return back()->with('message','Mật khẩu của bạn không đúng.');
-                // return back()->withErrors([
-                // 'message' => 'Mật khẩu của bạn không đúng']);
         }
         $this->validate(request(),[
                 'new_password'=>'required|min:6|max:20|confirmed'
             ],
             [
+                'new_password.required'=>'Vui lòng nhập mật khẩu mới',
                 'new_password.min'=>'Mật khẩu của bạn tối thiểu 6 kí tự.',
                 'new_password.max'=>'Mật khẩu của bạn tối đa 20 kí tự.',
                 'new_password.confirmed'=>'Xác nhận mật khẩu không đúng.'
             ]);
+        if($request->password == $request->new_password){
+            return back()->with('message','Mật khẩu mới trùng khớp mật khẩu cũ.');
+        }
         $user = User::find($id);
         $user->password = bcrypt($request->new_password);
         $user->save();
-        return redirect('../../profile')->with('updated','Cập nhật mật khẩu thành công.');
+        return redirect(route('profile'))->with('updated','Cập nhật mật khẩu thành công.');
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use App\Order;
+use App\Models\Order;
 use App\User;
 // use Illuminate\Database\Eloquent\Model;
 

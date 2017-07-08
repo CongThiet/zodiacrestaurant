@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
-use App\Cart;
-use App\Product;
-use App\Customer;
-use App\Order;
-use App\OrderDetail;
+use App\Models\Cart;
+use App\Models\Product;
+use App\Models\Customer;
+use App\Models\Order;
+use App\Models\OrderDetail;
 use App\User;
 use DB;
 
@@ -27,8 +27,8 @@ class CartController extends Controller
         return view('views.order.view-order',compact('orders'));
     }
     public function viewOrderDetail(Order $order){
-        $order_details = DB::table('order_details')->join('products','products.id','=','order_details.product_id')
-                        ->where('order_id','=' ,$order->id)
+        $order_details = OrderDetail::where('order_id','=' ,$order->id)
+                        ->join('products','products.id','=','order_details.product_id')
                         ->get();
         $customers = Customer::where('id',$order->customer_id)->get();
         return view('views.order.view-order-detail',compact('order','order_details','customers'));

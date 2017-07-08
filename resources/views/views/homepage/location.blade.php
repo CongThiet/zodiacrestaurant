@@ -35,22 +35,21 @@
 			<ul class="nav navbar-nav navbar-right" style="padding-right: 65px;">
 			@if(Auth::check())
 				<li class="dropdown dropdown-user" >
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						@if( Auth::user()->image_avatar == null )
-							<img class="img-circle" src="{{asset('/admin/images/images-avatar/avatar-null.png')}}" alt="User profile picture" style="width: 26px; height: 26px;">
-						@else
-							<img class="img-circle" src="{{asset('/admin/images/images-avatar')}}/{{Auth::user()->image_avatar}}" alt="User profile picture" style="width: 26px; height: 26px;">
-						@endif
+					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					@if( Auth::user()->image_avatar == null )
+						<img class="img-circle" src="{{asset('/admin/images/images-avatar/avatar-null.png')}}" alt="User profile picture" style="width: 26px; height: 26px;">
+					@else
+						<img class="img-circle" src="{{asset('/admin/images/images-avatar')}}/{{Auth::user()->image_avatar}}" alt="User profile picture" style="width: 26px; height: 26px;">
+					@endif
 
-						@if(Auth::user()->level == 1)
-							ADMIN: {{Auth::user()->lastName}}
-						@elseif(Auth::user()->level == 2)
-							Nhân viên: {{Auth::user()->lastName}}
-						@else
-							Xin chào: {{Auth::user()->lastName}}
-						@endif						
-					<span class="caret"></span>
-					</a>
+					@if(Auth::user()->level == 1)
+						<span>ADMIN: {{Auth::user()->lastName}}</span>
+					@elseif(Auth::user()->level == 2)
+						<span>Nhân viên: {{Auth::user()->lastName}}</span>
+					@else
+						<span>Xin chào: {{Auth::user()->lastName}}</span>
+					@endif
+					<span class="caret"></span></button>
 					<ul class="dropdown-menu drop-menu drop-nav">
 						@if(Auth::user()->level == 1)
 						
@@ -95,7 +94,7 @@
 						@foreach($product_cart as $product)
 								<div class="cart-item">
 									<div class="cart-item-w">
-										<div class="item-img"><a href="{{route('home')}}" style="background-image: url({{$product['item']['image']}});"></a></div>
+										<div class="item-img"><a href="{{route('home')}}" style="background-image: url('{{asset('/admin/images/images-product')}}/{{$product['item']['image']}}');"></a></div>
 										<div class="item-bk">
 											<a class="item-name" href=""><strong>{{$product['item']['productName']}}</strong></a>
 											<span class="item-quan">Số lượng: <span class="value">{{$product['quantity']}}</span></span>
@@ -147,7 +146,7 @@
                 <hr style="border: 1px solid #759440;">
                     <div class="list-store">
                         <div class="col-md-6 img-location">
-                            <img src="{{$location->image}}" alt="">
+                            <img src="{{asset('/admin/images/images-location')}}/{{$location->image}}" alt="">
                         </div>
                         <div class="col-md-6 content-location">
                             <p class="name-store"><b>ẨM THỰC ZODIAC</b></p>

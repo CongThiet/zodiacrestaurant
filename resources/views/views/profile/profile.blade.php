@@ -14,7 +14,7 @@
             <h4>Thông tin tài khoản</h4>
         </div>
         <div class="row show-info">
-            <ul class="nav nav-tabs tab-list" role="tablist" >
+            <ul class="nav nav-tabs tab-list">
                 <li role="presentation" class="select-info">
                     <a href="{{route('profile')}}"><strong style="color: #2d2525;">Thông tin cá nhân</strong></a>
                 </li>
@@ -25,7 +25,7 @@
                     <a href="{{route('profile-change-password')}}" ><strong style="color: #2d2525;">Thay đổi mật khẩu</strong></a>
                 </li>
             </ul>
-                <div class="profile col-md-6">
+                <div class="profile col-md-6 tab-pane">
                 @if( Auth::user()->image_avatar == null )
                     <img class="profile-user-img-update img-responsive img-circle" src="{{asset('/admin/images/images-avatar/avatar-null.png')}}" alt="User profile picture" style="width: 220px; height: 229px;" id="image">
                 @else

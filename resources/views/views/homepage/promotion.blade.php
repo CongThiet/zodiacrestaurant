@@ -35,22 +35,21 @@
 			<ul class="nav navbar-nav navbar-right" style="padding-right: 65px;">
 			@if(Auth::check())
 				<li class="dropdown dropdown-user" >
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						@if( Auth::user()->image_avatar == null )
-							<img class="img-circle" src="{{asset('/admin/images/images-avatar/avatar-null.png')}}" alt="User profile picture" style="width: 26px; height: 26px;">
-						@else
-							<img class="img-circle" src="{{asset('/admin/images/images-avatar')}}/{{Auth::user()->image_avatar}}" alt="User profile picture" style="width: 26px; height: 26px;">
-						@endif
+					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+					@if( Auth::user()->image_avatar == null )
+						<img class="img-circle" src="{{asset('/admin/images/images-avatar/avatar-null.png')}}" alt="User profile picture" style="width: 26px; height: 26px;">
+					@else
+						<img class="img-circle" src="{{asset('/admin/images/images-avatar')}}/{{Auth::user()->image_avatar}}" alt="User profile picture" style="width: 26px; height: 26px;">
+					@endif
 
-						@if(Auth::user()->level == 1)
-							ADMIN: {{Auth::user()->lastName}}
-						@elseif(Auth::user()->level == 2)
-							Nhân viên: {{Auth::user()->lastName}}
-						@else
-							Xin chào: {{Auth::user()->lastName}}
-						@endif						
-					<span class="caret"></span>
-					</a>
+					@if(Auth::user()->level == 1)
+						<span>ADMIN: {{Auth::user()->lastName}}</span>
+					@elseif(Auth::user()->level == 2)
+						<span>Nhân viên: {{Auth::user()->lastName}}</span>
+					@else
+						<span>Xin chào: {{Auth::user()->lastName}}</span>
+					@endif
+					<span class="caret"></span></button>
 					<ul class="dropdown-menu drop-menu drop-nav">
 						@if(Auth::user()->level == 1)
 							<li><a href="{{route('profile')}}"><i class="fa fa-user" aria-hidden="true"></i> Thông tin</a></li>
@@ -94,7 +93,7 @@
 						@foreach($product_cart as $product)
 								<div class="cart-item">
 									<div class="cart-item-w">
-										<div class="item-img"><a href="{{route('home')}}" style="background-image: url({{$product['item']['image']}});"></a></div>
+										<div class="item-img"><a href="{{route('home')}}" style="background-image: url('{{asset('/admin/images/images-product')}}/{{$product['item']['image']}}');"></a></div>
 										<div class="item-bk">
 											<a class="item-name" href=""><strong>{{$product['item']['productName']}}</strong></a>
 											<span class="item-quan">Số lượng: <span class="value">{{$product['quantity']}}</span></span>
@@ -145,9 +144,9 @@
             @foreach($promotions as $promotion)
                 <div class="col-lg-6 col-md-6 promo">
                     <div class="row">
-                        <a class="col-md-6 promo-img" href="{{$promotion->link}}" style="background-image: url('{{$promotion->image}}');"  alt="{{$promotion->title}}"></a>
+                        <a class="col-md-6 promo-img" href="{{$promotion->link}}" title="{{$promotion->title}}" style="background-image: url('{{asset('/admin/images/images-promotion')}}/{{$promotion->image}}');"  alt="{{$promotion->title}}"></a>
                         <div class="col-md-6 promo-content ">
-                            <a class="promo-title" href="{{$promotion->link}}">{{$promotion->title}}</a>
+                            <a class="promo-title" href="{{$promotion->link}}" title="{{$promotion->title}}">{{$promotion->title}}</a>
                             <p>{{$promotion->description}}</p>
                             <button class="btn promo-next"><a href=""><i class="fa fa-forward" aria-hidden="true"></i>Xem chi tiết</a></button>
                         </div>

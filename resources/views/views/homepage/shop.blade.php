@@ -97,7 +97,7 @@
                 <div class="col-sm-3 col-lg-3 col-md-3">
                     <div class="thumbnail">
                         <div class="thumbnail-img">
-                            <img src="{{$item->image}} " alt="">
+                            <img src="{{asset('/admin/images/images-product')}}/{{$item->image}}" alt="">
                         </div>
                         <div class="caption">
                             <h4>{{$item->productName}} </h4>

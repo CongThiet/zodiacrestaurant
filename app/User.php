@@ -1,8 +1,8 @@
 <?php
 
 namespace App;
-use App\Customer;
-use App\Order;
+use App\Models\Customer;
+use App\Models\Order;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
