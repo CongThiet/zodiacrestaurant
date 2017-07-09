@@ -29,7 +29,7 @@
 
 
 
-<!-- JS -->>
+<!-- JS -->
 <script src="{{asset('/node_modules/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="{{asset('/node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
