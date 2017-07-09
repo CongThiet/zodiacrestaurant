@@ -119,9 +119,11 @@ class AdminController extends Controller
     }
     public function productSearch(Request $request){
         $search =$request->search;
-        $products = Product::where('productName', 'like',"%$search%")->get();
+        $products = Product::where('productName', 'like',"%$search%")
+                            ->get();
         session()->flash('products', $products);
         return redirect()->back();
+        
     }
 
 }

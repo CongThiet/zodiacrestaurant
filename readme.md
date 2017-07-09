@@ -15,6 +15,13 @@
 ## Website
 http://zodiacrestaurant.hol.es/
 
+## Test trên website
+  website chia thành 3 cấp độ level
+  - *1: admin-chủ cửa hàng*: Tài khoản test: ```tranvananuet@gmail.com - 123456```
+  - *2: nhân viên*: Tài khoản test: ```herolhp96@gmail.com - 123456```
+  - *3: khách hàng*: Tài khoản mặc định khi 1 thành viên đăng kí trên website
+
+
 ## Ngôn ngữ
   HTML, CSS, JS, PHP
 
