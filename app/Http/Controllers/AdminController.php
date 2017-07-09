@@ -8,7 +8,7 @@ use App\Models\Contact;
 use App\Models\OrderDetail;
 use App\Models\Product;
 use Carbon\Carbon;
-use ConsoleTVs\Charts\Facades\Charts;
+use Charts;
 use Session;
 
 class AdminController extends Controller
@@ -120,9 +120,7 @@ class AdminController extends Controller
     public function productSearch(Request $request){
         $search =$request->search;
         $products = Product::where('productName', 'like',"%$search%")->get();
-        // dd($products);
         session()->flash('products', $products);
-        dd(session('products'));
         return redirect()->back();
     }
 

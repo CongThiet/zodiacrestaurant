@@ -25,11 +25,11 @@
                     <a href="{{route('profile-change-password')}}" ><strong style="color: #2d2525;">Thay đổi mật khẩu</strong></a>
                 </li>
             </ul>
-                <div class="profile col-md-6 tab-pane">
+                <div class="profile col-md-8 tab-pane">
                 @if( Auth::user()->image_avatar == null )
-                    <img class="profile-user-img-update img-responsive img-circle" src="{{asset('/admin/images/images-avatar/avatar-null.png')}}" alt="User profile picture" style="width: 220px; height: 229px;" id="image">
+                    <img class="profile-user-img-update img-responsive img-circle update-info " src="{{asset('/admin/images/images-avatar/avatar-null.png')}}" alt="User profile picture" style="width: 220px; height: 229px;" id="image">
                 @else
-                    <img class="profile-user-img-update img-responsive img-circle" src="{{asset('/admin/images/images-avatar')}}/{{Auth::user()->image_avatar}}" style="width: 220px; height: 229px;" alt="User profile picture" id="image">
+                    <img class="profile-user-img-update img-responsive img-circle update-info " src="{{asset('/admin/images/images-avatar')}}/{{Auth::user()->image_avatar}}" style="width: 220px; height: 229px;" alt="User profile picture" id="image">
                 @endif
                     <ul class="list-group list-group-unbordered">
                         <li class="list-group-item">

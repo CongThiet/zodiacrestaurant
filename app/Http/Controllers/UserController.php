@@ -15,13 +15,15 @@ class UserController extends Controller
     }
     public function update(Request $request, $id){
         $this->validate(request(),[
+                'lastName'=>'required',
                 'name'=>'required',
                 'address'=>'required',
                 'phone'=>'required|min:8|max:16',
                 'phone'=>'numeric',
             ],
             [
-                'name.required'=>'Vui lòng nhập tên.',
+                'lastName.required'=>'Vui lòng nhập tên.',
+                'name.required'=>'Vui lòng nhập họ tên đầy đủ.',
                 'address.required'=>'Vui lòng nhập địa chỉ.',
                 'phone.required'=>'Vui lòng nhập số điện thoại.',
                 'phone.numeric'=>'Số điện thoại không đúng định dạng',
