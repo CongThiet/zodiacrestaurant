@@ -3,7 +3,7 @@
 	@include('layouts.nav')
 @endsection
 @section('content')
-<div class="top-banner relative">
+<div class="top-banner relative ">
          @if(session('orderfail'))
             <div class="alert alert-danger noti" role="alert">
                 <strong>{{session('orderfail')}}</strong>
@@ -76,7 +76,7 @@
 			</div>
         </div>
 </div>
-    <section id="menu" class="bg-light-gray">
+    <section id="menu" class="content-menu">
         <div class="container">
             <div class="row" style="padding-bottom: 15px;">
                 <div class="col-lg-12 text-center">

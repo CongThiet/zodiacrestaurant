@@ -4,7 +4,7 @@
     @include('layouts.nav-custom')
 @endsection
 @section('content')
-<div class="top-banner">
+<div class="top-banner content-menu">
         <div class="row">
             <div class="row carousel-holder">
 

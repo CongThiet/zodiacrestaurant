@@ -2,6 +2,10 @@ body {
     padding-top: 55px;
 }
 
+.content-menu {
+    background-image: url('../../admin/images/images/bg.png');
+}
+
 .slide-image {
     width: 100%;
 }
@@ -86,8 +90,12 @@ body {
     /*Safari shadow version*/
     -moz-box-shadow: 0px 0px 30px gray;
     /*Mozilla shadow version*/
-    width: 260px;
+    width: 258px;
     height: 260px;
+}
+
+.thumbnail-img {
+    border: 2px solid #767676;
 }
 
 .ratings {
@@ -98,6 +106,7 @@ body {
 
 .thumbnail {
     padding: 0;
+    background-image: url('../../admin/images/images/p-bg.png');
 }
 
 .thumbnail .caption-full {
