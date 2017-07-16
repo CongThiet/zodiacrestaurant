@@ -11,6 +11,7 @@ use App\Models\Order;
 use App\Models\OrderDetail;
 use App\User;
 use DB;
+use Carbon\Carbon;
 
 class CartController extends Controller
 {   
@@ -124,7 +125,7 @@ class CartController extends Controller
             Order::create([
                 'user_id'=>Auth::user()->id,
                 'customer_id'=>$customer->id,
-                'orderDate'=>date('Y-m-d'),
+                'orderDate'=>Carbon::today('Asia/Ho_Chi_Minh')->toDateString(),
                 'totalPrice'=>$cart->totalPrice,
                 'payment'=>request('payment_method'),
                 'note'=>request('note')
@@ -143,7 +144,7 @@ class CartController extends Controller
             }
         }
         Session::forget('cart');
-        return redirect()->back()->with('notification','Đặt hàng thành công - Chúc bạn có một bữa ăn vui vẻ!!!');
+        return redirect()->back()->with('notification','Bạn đặt hàng thành công!!!');
         // Cách 2 dùng Request $request
         // $customer = new Customer;
         // $customer->user_id = Auth::user()->id;

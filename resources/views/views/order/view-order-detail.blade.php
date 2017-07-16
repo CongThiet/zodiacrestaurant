@@ -11,7 +11,7 @@ endsection
         </div>
         <div class="row" >
             <div class="date_order">
-                <strong>Ngày đặt hàng: </strong><span><i> {{$order->created_at->toDateString()}}</i></span>
+                <strong>Ngày đặt hàng: </strong><span><i> {{$order->orderDate}}</i></span>
                 <span style="margin-left: 50px"><strong >Trạng thái đơn hàng:</strong><i> {{$order->status}}</i></span>
                 @if(Auth::user()->level<=2)
                     <span style="margin-left: 50px"><strong>Người nhận đơn hàng:</strong><i> {{$order->nameShip}}</i></span>

@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2017 at 07:24 AM
+-- Generation Time: Jul 15, 2017 at 09:41 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -67,14 +67,13 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `message`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Trần Văn An', 'antv96nd@gmail.com', '0987654321', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-03 03:04:37', '2017-07-03 07:17:21'),
-(2, 'Vũ Thị Cúc', 'tranvananuet@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'chưa xem', '2017-07-03 03:04:48', '2017-07-03 03:04:48'),
-(3, 'Hưng Yên', 'antv96nd@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'chưa xem', '2017-07-03 03:04:59', '2017-07-03 03:04:59'),
-(4, 'AVX', 'loveforever827@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-03 03:05:13', '2017-07-03 10:55:05'),
-(5, 'Dương Công Minh', 'loveforever827@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-03 03:05:33', '2017-07-03 09:58:22'),
-(6, 'Hải Phòng', 'herolhp@gmail.com', '0914395317', 'Đây là hoá chất cực độc, là chất tẩy rửa dùng trong công nghiệp. Hoá chất này không được phép dùng trong y tế. Hoá chất này rất độc, nếu ngấm vào máu có thể lập tức gây tử vong. Nồng độ hoá chất này rất nặng. Thậm chí với số lượng lớn có thể gây mục xương trong thời gian ngắn.\r\n\r\nTrước đó, khoảng 8 giờ ngày 29/5, tại Khoa Thận nhân tạo, BV Đa khoa Hòa Bình, 18 bệnh nhân đang chạy thận nhân tạo bất ngờ xuất hiện triệu chứng của sốc phản vệ, 8 người tử vong sau đó.', 'đã xem', '2017-07-04 08:47:54', '2017-07-04 23:21:47'),
-(7, 'Hải Phòng', 'antv96nd@gmail.com', '12312312312312312312312312', '1213123', 'chưa xem', '2017-07-05 19:39:26', '2017-07-05 19:39:26'),
-(8, 'Cao Thái Châu', 'herolhp@gmail.com', '04862493357', 'Còn nhớ ở mùa hè 2016, MU từng gây sốc khi mua lại Paul Pogba từ Juventus với giá 89,3 triệu bảng (105 triệu euro). Để rồi sau đó, “Quỷ đỏ” hoàn tất kỳ chuyển nhượng với 3 tân binh nữa là Ibrahimovic, Bailly và Mkhitaryan.\r\n\r\nCuối mùa, MU đoạt “cú ăn 3” và hiện tại tất cả đều hy vọng vào những chính sách chuyển nhượng của Mourinho ở mùa giải năm nay sẽ giúp đội bóng tìm lại ánh hào quang đã mất tại đấu trường Champions League.\r\n\r\nTuy nhiên, vấn đề khá nghiêm trọng là MU đang bị ép giá trong vụ mua Alvaro Morata, Matic, Perisic, Fabinho, nên tốc độ đang chậm hơn so với chờ đợi của HLV Mourinho.  Mặc dù vậy, theo những nguồn tin loan báo, MU thực tế đang “nắm đằng chuôi” sau khi đồng loạt những mục tiêu chính của “Quỷ đỏ” trong mùa hè này đang nằng nặc đòi chia tay đội bóng cũ để tìm đến “Nhà hát của những giấc mơ”.', 'chưa xem', '2017-07-05 22:56:04', '2017-07-05 22:56:04');
+(1, 'Trần Văn An', 'antv96nd@gmail.com', '0987654321', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-02 20:04:37', '2017-07-03 00:17:21'),
+(2, 'Vũ Thị Cúc', 'tranvananuet@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-02 20:04:48', '2017-07-06 19:13:25'),
+(3, 'Hưng Yên', 'antv96nd@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-02 20:04:59', '2017-07-06 21:56:38'),
+(4, 'AVX', 'loveforever827@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-02 20:05:13', '2017-07-03 03:55:05'),
+(5, 'Dương Công Minh', 'loveforever827@gmail.com', '0914395317', 'Các nhà tổ chức còn cố gắng làm mọi cách nhằm tạo tính cạnh tranh cao hơn, từ mở rộng sân đấu tới thay đổi địa hình vị trí đánh nhằm ngăn sự thống trị của Tiger Woods. Nhưng những thử thách ấy chẳng làm khó Woods khi anh càng khuynh đảo làng golf.\r\n\r\nBóng đá không thể thay đổi điều luật như vậy chỉ vì một hoặc một vài cá nhân tài giỏi hơn hẳn phần còn lại. Tất cả phải thừa nhận sự xuất sắc của họ. Đó là lý do vì sao Ronaldo và Messi giống như “Mãnh hổ” chơi đùa với con mồi trong khu rừng của mình.', 'đã xem', '2017-07-02 20:05:33', '2017-07-03 02:58:22'),
+(6, 'Hải Phòng', 'herolhp@gmail.com', '0914395317', 'Đây là hoá chất cực độc, là chất tẩy rửa dùng trong công nghiệp. Hoá chất này không được phép dùng trong y tế. Hoá chất này rất độc, nếu ngấm vào máu có thể lập tức gây tử vong. Nồng độ hoá chất này rất nặng. Thậm chí với số lượng lớn có thể gây mục xương trong thời gian ngắn.\r\n\r\nTrước đó, khoảng 8 giờ ngày 29/5, tại Khoa Thận nhân tạo, BV Đa khoa Hòa Bình, 18 bệnh nhân đang chạy thận nhân tạo bất ngờ xuất hiện triệu chứng của sốc phản vệ, 8 người tử vong sau đó.', 'đã xem', '2017-07-04 01:47:54', '2017-07-04 16:21:47'),
+(8, 'Cao Thái Châu', 'herolhp@gmail.com', '04862493357', 'Còn nhớ ở mùa hè 2016, MU từng gây sốc khi mua lại Paul Pogba từ Juventus với giá 89,3 triệu bảng (105 triệu euro). Để rồi sau đó, “Quỷ đỏ” hoàn tất kỳ chuyển nhượng với 3 tân binh nữa là Ibrahimovic, Bailly và Mkhitaryan.\r\n\r\nCuối mùa, MU đoạt “cú ăn 3” và hiện tại tất cả đều hy vọng vào những chính sách chuyển nhượng của Mourinho ở mùa giải năm nay sẽ giúp đội bóng tìm lại ánh hào quang đã mất tại đấu trường Champions League.\r\n\r\nTuy nhiên, vấn đề khá nghiêm trọng là MU đang bị ép giá trong vụ mua Alvaro Morata, Matic, Perisic, Fabinho, nên tốc độ đang chậm hơn so với chờ đợi của HLV Mourinho.  Mặc dù vậy, theo những nguồn tin loan báo, MU thực tế đang “nắm đằng chuôi” sau khi đồng loạt những mục tiêu chính của “Quỷ đỏ” trong mùa hè này đang nằng nặc đòi chia tay đội bóng cũ để tìm đến “Nhà hát của những giấc mơ”.', 'chưa xem', '2017-07-05 15:56:04', '2017-07-05 15:56:04');
 
 -- --------------------------------------------------------
 
@@ -99,20 +98,34 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `user_id`, `name`, `gender`, `address`, `phone`, `note`, `created_at`, `updated_at`) VALUES
-(1, 3, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'Giao hàng ngay tối nay nhé cửa hàng', '2017-06-27 18:58:06', '2017-06-27 18:58:06'),
-(2, 3, 'Vũ Thị Cúc', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'Cần vào trưa nay', '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
-(3, 3, 'Trần An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0987654321', 'Giao hàng trưa nay', '2017-06-27 19:01:41', '2017-06-27 19:01:41'),
-(4, 3, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'cần vào lúc 11h trưa nay', '2017-06-27 19:08:48', '2017-06-27 19:08:48'),
-(5, 3, 'Vũ Thị Cúc', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'giao hàng sớm', '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
-(6, 4, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0987654321', 'cần vào lúc 6 giờ tối', '2017-06-27 21:40:30', '2017-06-27 21:40:30'),
-(7, 4, 'Trần Văn An', 'Nam', 'Nghĩa Hưng', '0987654321', 'giao hàng', '2017-06-30 21:37:15', '2017-06-30 21:37:15'),
-(8, 3, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', '123456', '2017-07-02 16:34:36', '2017-07-02 16:34:36'),
-(9, 3, 'Đặng Công', 'Nam', 'Nghĩa Hưng', '0987654321', 'Cần tối nay', '2017-07-02 16:43:19', '2017-07-02 16:43:19'),
-(10, 3, 'Dương Công Minh', 'Nữ', 'Bắc Giang', '123456789', 'Cần lúc 6h tối', '2017-07-02 19:07:32', '2017-07-02 19:07:32'),
-(11, 3, 'Đặng Hữu Công', 'Nữ', 'Nghĩa Hưng', '0914395317', 'Cần hàng tối nay', '2017-07-03 08:11:35', '2017-07-03 08:11:35'),
-(12, 3, 'Dương Công Minh', 'Nam', 'Nam Từ Liêm - Hà Nội', '123456789', 'Giao hàng tối nay', '2017-07-04 04:06:06', '2017-07-04 04:06:06'),
-(13, 5, 'Cao Thái Châu', 'Nam', 'Trà Vinh', '04862493357', 'abc', '2017-07-04 23:10:39', '2017-07-04 23:10:39'),
-(14, 5, 'Cao Thái Châu', 'Nam', 'Trà Vinh', '04862493357', NULL, '2017-07-04 23:14:34', '2017-07-04 23:14:34');
+(1, 3, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'Giao hàng ngay tối nay nhé cửa hàng', '2017-06-27 11:58:06', '2017-06-27 11:58:06'),
+(2, 3, 'Vũ Thị Cúc', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'Cần vào trưa nay', '2017-06-27 11:58:44', '2017-06-27 11:58:44'),
+(3, 3, 'Trần An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0987654321', 'Giao hàng trưa nay', '2017-06-27 12:01:41', '2017-06-27 12:01:41'),
+(4, 3, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'cần vào lúc 11h trưa nay', '2017-06-27 12:08:48', '2017-06-27 12:08:48'),
+(5, 3, 'Vũ Thị Cúc', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', 'giao hàng sớm', '2017-06-27 13:07:00', '2017-06-27 13:07:00'),
+(6, 4, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0987654321', 'cần vào lúc 6 giờ tối', '2017-06-27 14:40:30', '2017-06-27 14:40:30'),
+(7, 4, 'Trần Văn An', 'Nam', 'Nghĩa Hưng', '0987654321', 'giao hàng', '2017-06-30 14:37:15', '2017-06-30 14:37:15'),
+(8, 3, 'Trần Văn An', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', '123456', '2017-07-02 09:34:36', '2017-07-02 09:34:36'),
+(9, 3, 'Đặng Công', 'Nam', 'Nghĩa Hưng', '0987654321', 'Cần tối nay', '2017-07-02 09:43:19', '2017-07-02 09:43:19'),
+(10, 3, 'Dương Công Minh', 'Nữ', 'Bắc Giang', '123456789', 'Cần lúc 6h tối', '2017-07-02 12:07:32', '2017-07-02 12:07:32'),
+(11, 3, 'Đặng Hữu Công', 'Nữ', 'Nghĩa Hưng', '0914395317', 'Cần hàng tối nay', '2017-07-03 01:11:35', '2017-07-03 01:11:35'),
+(12, 3, 'Dương Công Minh', 'Nam', 'Nam Từ Liêm - Hà Nội', '123456789', 'Giao hàng tối nay', '2017-07-03 21:06:06', '2017-07-03 21:06:06'),
+(13, 5, 'Cao Thái Châu', 'Nam', 'Trà Vinh', '04862493357', 'abc', '2017-07-04 16:10:39', '2017-07-04 16:10:39'),
+(14, 5, 'Cao Thái Châu', 'Nam', 'Trà Vinh', '04862493357', NULL, '2017-07-04 16:14:34', '2017-07-04 16:14:34'),
+(15, 5, 'Cao Thái Châu', 'Nam', 'Trần Duy Hưng - Cầu Giấy - Hà Nội', '0946278350', 'abc', '2017-07-15 04:31:28', '2017-07-15 04:31:28'),
+(16, 5, 'Cao Thái Châu', 'Nam', 'Trần Duy Hưng - Cầu Giấy - Hà Nội', '0987654321', '123', '2017-07-15 04:34:12', '2017-07-15 04:34:12'),
+(17, 5, 'Cao Thái Châu', 'Nam', 'Trần Duy Hưng - Cầu Giấy - Hà Nội', '01263035213', 'abc', '2017-07-15 04:36:29', '2017-07-15 04:36:29'),
+(18, 5, 'Cao Thái Châu', 'Nam', 'Trần Duy Hưng - Cầu Giấy - Hà Nội', '04862493357', '21', '2017-07-15 04:38:50', '2017-07-15 04:38:50'),
+(19, 5, 'Cao Thái Châu', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', '123', '2017-07-15 04:41:29', '2017-07-15 04:41:29'),
+(20, 5, 'Cao Thái Châu', 'Nam', 'Trần Duy Hưng - Cầu Giấy - Hà Nội', '0946278350', '123', '2017-07-15 04:46:17', '2017-07-15 04:46:17'),
+(21, 5, 'Cao Thái Châu', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', '123', '2017-07-15 04:53:52', '2017-07-15 04:53:52'),
+(22, 5, 'Cao Thái Châu', 'Nam', 'Trần Duy Hưng - Cầu Giấy - Hà Nội', '04862493357', '123', '2017-07-15 04:56:11', '2017-07-15 04:56:11'),
+(23, 5, 'Cao Thái Châu', 'Nam', 'Trần Duy Hưng - Cầu Giấy - Hà Nội', '0946278350', '123', '2017-07-15 04:57:32', '2017-07-15 04:57:32'),
+(24, 5, 'Cao Thái Châu', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', '123', '2017-07-15 04:59:31', '2017-07-15 04:59:31'),
+(25, 5, 'Cao Thái Châu', 'Nam', 'Nam Từ Liêm - Hà Nội', '0914395317', '123', '2017-07-15 05:00:52', '2017-07-15 05:00:52'),
+(26, 5, 'Cao Thái Châu', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', '123', '2017-07-15 12:35:11', '2017-07-15 12:35:11'),
+(27, 5, 'Cao Thái Châu', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', '123', '2017-07-15 12:38:08', '2017-07-15 12:38:08'),
+(28, 5, 'Cao Thái Châu', 'Nam', 'Nam Từ Liêm - Hà Nội', '0946278350', '123', '2017-07-15 12:38:56', '2017-07-15 12:38:56');
 
 -- --------------------------------------------------------
 
@@ -207,20 +220,34 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `customer_id`, `user_id`, `orderDate`, `totalPrice`, `payment`, `note`, `status`, `nameShip`, `created_at`, `updated_at`) VALUES
-(1, 1, 3, '2017-06-28', 190, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng ngay tối nay nhé cửa hàng', 'Đặt hàng', NULL, '2017-06-27 18:58:07', '2017-06-27 18:58:07'),
-(2, 2, 3, '2017-06-28', 225.5, 'Thanh toán khi nhận hàng', 'Cần vào trưa nay', 'Đặt hàng', NULL, '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
-(3, 3, 3, '2017-06-28', 109, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng trưa nay', 'Đặt hàng', NULL, '2017-06-27 19:01:41', '2017-06-27 19:01:41'),
-(4, 4, 3, '2017-06-28', 127, 'Thanh toán khi nhận hàng', 'cần vào lúc 11h trưa nay', 'Đặt hàng', NULL, '2017-06-27 19:08:48', '2017-06-27 19:08:48'),
-(5, 5, 3, '2017-06-28', 81, 'Thanh toán khi nhận hàng', 'giao hàng sớm', 'Đặt hàng', NULL, '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
-(6, 6, 4, '2017-06-28', 171.5, 'Thanh toán khi nhận hàng', 'cần vào lúc 6 giờ tối', 'Đặt hàng', NULL, '2017-06-27 21:40:30', '2017-06-27 21:40:30'),
-(7, 7, 4, '2017-07-01', 46, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'giao hàng', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-06-30 21:37:15', '2017-07-04 04:05:12'),
-(8, 8, 3, '2017-07-02', 81, 'Thanh toán khi nhận hàng', '123456', 'Đã nhận đơn hàng', 'Nguyễn Văn Mạnh', '2017-07-02 16:34:36', '2017-07-03 10:35:45'),
-(9, 9, 3, '2017-07-02', 144, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Cần tối nay', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-07-02 16:43:19', '2017-07-03 10:30:38'),
-(10, 10, 3, '2017-07-03', 160.5, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Cần lúc 6h tối', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-07-02 19:07:32', '2017-07-03 08:59:01'),
-(11, 11, 3, '2017-07-03', 67, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Cần hàng tối nay', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-07-03 08:11:35', '2017-07-03 10:29:06'),
-(12, 12, 3, '2017-07-04', 35, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng tối nay', 'Đặt hàng', NULL, '2017-07-04 04:06:06', '2017-07-04 04:06:06'),
-(13, 13, 5, '2017-07-05', 149, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'abc', 'Đã nhận đơn hàng', 'Nguyễn Văn Mạnh', '2017-07-04 23:10:39', '2017-07-04 23:11:01'),
-(14, 14, 5, '2017-07-05', 105, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', NULL, 'Đã nhận đơn hàng', 'Nguyễn Văn Mạnh', '2017-07-04 23:14:34', '2017-07-04 23:21:28');
+(1, 1, 3, '2017-06-28', 190, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng ngay tối nay nhé cửa hàng', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-06-27 11:58:07', '2017-07-06 16:42:47'),
+(2, 2, 3, '2017-06-28', 225.5, 'Thanh toán khi nhận hàng', 'Cần vào trưa nay', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-06-27 11:58:44', '2017-07-06 19:14:04'),
+(3, 3, 3, '2017-06-28', 109, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng trưa nay', 'Đặt hàng', NULL, '2017-06-27 12:01:41', '2017-06-27 12:01:41'),
+(4, 4, 3, '2017-06-28', 127, 'Thanh toán khi nhận hàng', 'cần vào lúc 11h trưa nay', 'Đặt hàng', NULL, '2017-06-27 12:08:48', '2017-06-27 12:08:48'),
+(5, 5, 3, '2017-06-28', 81, 'Thanh toán khi nhận hàng', 'giao hàng sớm', 'Đặt hàng', NULL, '2017-06-27 13:07:00', '2017-06-27 13:07:00'),
+(6, 6, 4, '2017-06-28', 171.5, 'Thanh toán khi nhận hàng', 'cần vào lúc 6 giờ tối', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-06-27 14:40:30', '2017-07-10 21:33:40'),
+(7, 7, 4, '2017-07-01', 46, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'giao hàng', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-06-30 14:37:15', '2017-07-03 21:05:12'),
+(8, 8, 3, '2017-07-02', 81, 'Thanh toán khi nhận hàng', '123456', 'Đã nhận đơn hàng', 'Nguyễn Văn Mạnh', '2017-07-02 09:34:36', '2017-07-03 03:35:45'),
+(9, 9, 3, '2017-07-02', 144, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Cần tối nay', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-07-02 09:43:19', '2017-07-03 03:30:38'),
+(10, 10, 3, '2017-07-03', 160.5, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Cần lúc 6h tối', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-07-02 12:07:32', '2017-07-03 01:59:01'),
+(11, 11, 3, '2017-07-03', 67, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Cần hàng tối nay', 'Đã nhận đơn hàng', 'Trần Văn An', '2017-07-03 01:11:35', '2017-07-03 03:29:06'),
+(12, 12, 3, '2017-07-04', 35, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'Giao hàng tối nay', 'Đặt hàng', NULL, '2017-07-03 21:06:06', '2017-07-03 21:06:06'),
+(13, 13, 5, '2017-07-05', 149, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'abc', 'Đã nhận đơn hàng', 'Nguyễn Văn Mạnh', '2017-07-04 16:10:39', '2017-07-04 16:11:01'),
+(14, 14, 5, '2017-07-05', 105, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', NULL, 'Đã nhận đơn hàng', 'Nguyễn Văn Mạnh', '2017-07-04 16:14:34', '2017-07-04 16:21:28'),
+(15, 15, 5, '2017-07-15', 99, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'abc', 'Đặt hàng', NULL, '2017-07-15 04:31:29', '2017-07-15 04:31:29'),
+(16, 16, 5, '2017-07-15', 53, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 04:34:12', '2017-07-15 04:34:12'),
+(17, 17, 5, '2017-07-15', 35, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', 'abc', 'Đặt hàng', NULL, '2017-07-15 04:36:29', '2017-07-15 04:36:29'),
+(18, 18, 5, '2017-07-15', 45, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', '21', 'Đặt hàng', NULL, '2017-07-15 04:38:50', '2017-07-15 04:38:50'),
+(19, 19, 5, '2017-07-15', 49.5, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 04:41:29', '2017-07-15 04:41:29'),
+(20, 20, 5, '2017-07-15', 55, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 04:46:17', '2017-07-15 04:46:17'),
+(21, 21, 5, '2017-07-15', 65.5, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 04:53:52', '2017-07-15 04:53:52'),
+(22, 22, 5, '2017-07-15', 65.5, 'Thanh toán qua Internet Banking hoặc thẻ tín dụng', '123', 'Đặt hàng', NULL, '2017-07-15 04:56:11', '2017-07-15 04:56:11'),
+(23, 23, 5, '2017-07-15', 35, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 04:57:32', '2017-07-15 04:57:32'),
+(24, 24, 5, '2017-07-15', 55, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 04:59:32', '2017-07-15 04:59:32'),
+(25, 25, 5, '2017-07-15', 19, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 05:00:53', '2017-07-15 05:00:53'),
+(26, 26, 5, '2017-07-15', 60, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 12:35:11', '2017-07-15 12:35:11'),
+(27, 27, 5, '2017-07-15', 94.5, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 12:38:08', '2017-07-15 12:38:08'),
+(28, 28, 5, '2017-07-15', 35, 'Thanh toán khi nhận hàng', '123', 'Đặt hàng', NULL, '2017-07-15 12:38:56', '2017-07-15 12:38:56');
 
 -- --------------------------------------------------------
 
@@ -243,39 +270,55 @@ CREATE TABLE `order_details` (
 --
 
 INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `quantity`, `price`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 1, 46, '2017-06-27 18:58:07', '2017-06-27 18:58:07'),
-(2, 1, 2, 1, 35, '2017-06-27 18:58:07', '2017-06-27 18:58:07'),
-(3, 1, 3, 1, 53, '2017-06-27 18:58:07', '2017-06-27 18:58:07'),
-(4, 1, 4, 1, 56, '2017-06-27 18:58:07', '2017-06-27 18:58:07'),
-(5, 2, 6, 1, 45.5, '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
-(6, 2, 7, 1, 65.5, '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
-(7, 2, 30, 1, 59, '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
-(8, 2, 5, 1, 55.5, '2017-06-27 18:58:44', '2017-06-27 18:58:44'),
-(9, 3, 3, 1, 53, '2017-06-27 19:01:41', '2017-06-27 19:01:41'),
-(10, 3, 4, 1, 56, '2017-06-27 19:01:41', '2017-06-27 19:01:41'),
-(11, 4, 1, 2, 46, '2017-06-27 19:08:48', '2017-06-27 19:08:48'),
-(12, 4, 2, 1, 35, '2017-06-27 19:08:48', '2017-06-27 19:08:48'),
-(13, 5, 1, 1, 46, '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
-(14, 5, 2, 1, 35, '2017-06-27 20:07:00', '2017-06-27 20:07:00'),
-(15, 6, 3, 2, 53, '2017-06-27 21:40:30', '2017-06-27 21:40:30'),
-(16, 6, 7, 1, 65.5, '2017-06-27 21:40:30', '2017-06-27 21:40:30'),
-(17, 7, 1, 1, 46, '2017-06-30 21:37:15', '2017-06-30 21:37:15'),
-(18, 8, 1, 1, 46, '2017-07-02 16:34:36', '2017-07-02 16:34:36'),
-(19, 8, 2, 1, 35, '2017-07-02 16:34:36', '2017-07-02 16:34:36'),
-(20, 9, 2, 1, 35, '2017-07-02 16:43:19', '2017-07-02 16:43:19'),
-(21, 9, 3, 1, 53, '2017-07-02 16:43:19', '2017-07-02 16:43:19'),
-(22, 9, 4, 1, 56, '2017-07-02 16:43:19', '2017-07-02 16:43:19'),
-(23, 10, 6, 1, 45.5, '2017-07-02 19:07:32', '2017-07-02 19:07:32'),
-(24, 10, 51, 2, 57.5, '2017-07-02 19:07:32', '2017-07-02 19:07:32'),
-(25, 11, 16, 1, 34, '2017-07-03 08:11:35', '2017-07-03 08:11:35'),
-(26, 11, 17, 1, 33, '2017-07-03 08:11:35', '2017-07-03 08:11:35'),
-(27, 12, 2, 1, 35, '2017-07-04 04:06:06', '2017-07-04 04:06:06'),
-(28, 13, 1, 1, 46, '2017-07-04 23:10:40', '2017-07-04 23:10:40'),
-(29, 13, 36, 1, 22, '2017-07-04 23:10:40', '2017-07-04 23:10:40'),
-(30, 13, 50, 1, 56, '2017-07-04 23:10:40', '2017-07-04 23:10:40'),
-(31, 13, 39, 1, 25, '2017-07-04 23:10:40', '2017-07-04 23:10:40'),
-(32, 14, 31, 1, 60, '2017-07-04 23:14:34', '2017-07-04 23:14:34'),
-(33, 14, 54, 1, 45, '2017-07-04 23:14:34', '2017-07-04 23:14:34');
+(1, 1, 1, 1, 46, '2017-06-27 11:58:07', '2017-06-27 11:58:07'),
+(2, 1, 2, 1, 35, '2017-06-27 11:58:07', '2017-06-27 11:58:07'),
+(3, 1, 3, 1, 53, '2017-06-27 11:58:07', '2017-06-27 11:58:07'),
+(4, 1, 4, 1, 56, '2017-06-27 11:58:07', '2017-06-27 11:58:07'),
+(5, 2, 6, 1, 45.5, '2017-06-27 11:58:44', '2017-06-27 11:58:44'),
+(6, 2, 7, 1, 65.5, '2017-06-27 11:58:44', '2017-06-27 11:58:44'),
+(7, 2, 30, 1, 59, '2017-06-27 11:58:44', '2017-06-27 11:58:44'),
+(8, 2, 5, 1, 55.5, '2017-06-27 11:58:44', '2017-06-27 11:58:44'),
+(9, 3, 3, 1, 53, '2017-06-27 12:01:41', '2017-06-27 12:01:41'),
+(10, 3, 4, 1, 56, '2017-06-27 12:01:41', '2017-06-27 12:01:41'),
+(11, 4, 1, 2, 46, '2017-06-27 12:08:48', '2017-06-27 12:08:48'),
+(12, 4, 2, 1, 35, '2017-06-27 12:08:48', '2017-06-27 12:08:48'),
+(13, 5, 1, 1, 46, '2017-06-27 13:07:00', '2017-06-27 13:07:00'),
+(14, 5, 2, 1, 35, '2017-06-27 13:07:00', '2017-06-27 13:07:00'),
+(15, 6, 3, 2, 53, '2017-06-27 14:40:30', '2017-06-27 14:40:30'),
+(16, 6, 7, 1, 65.5, '2017-06-27 14:40:30', '2017-06-27 14:40:30'),
+(17, 7, 1, 1, 46, '2017-06-30 14:37:15', '2017-06-30 14:37:15'),
+(18, 8, 1, 1, 46, '2017-07-02 09:34:36', '2017-07-02 09:34:36'),
+(19, 8, 2, 1, 35, '2017-07-02 09:34:36', '2017-07-02 09:34:36'),
+(20, 9, 2, 1, 35, '2017-07-02 09:43:19', '2017-07-02 09:43:19'),
+(21, 9, 3, 1, 53, '2017-07-02 09:43:19', '2017-07-02 09:43:19'),
+(22, 9, 4, 1, 56, '2017-07-02 09:43:19', '2017-07-02 09:43:19'),
+(23, 10, 6, 1, 45.5, '2017-07-02 12:07:32', '2017-07-02 12:07:32'),
+(24, 10, 51, 2, 57.5, '2017-07-02 12:07:32', '2017-07-02 12:07:32'),
+(25, 11, 16, 1, 34, '2017-07-03 01:11:35', '2017-07-03 01:11:35'),
+(26, 11, 17, 1, 33, '2017-07-03 01:11:35', '2017-07-03 01:11:35'),
+(27, 12, 2, 1, 35, '2017-07-03 21:06:06', '2017-07-03 21:06:06'),
+(28, 13, 1, 1, 46, '2017-07-04 16:10:40', '2017-07-04 16:10:40'),
+(29, 13, 36, 1, 22, '2017-07-04 16:10:40', '2017-07-04 16:10:40'),
+(30, 13, 50, 1, 56, '2017-07-04 16:10:40', '2017-07-04 16:10:40'),
+(31, 13, 39, 1, 25, '2017-07-04 16:10:40', '2017-07-04 16:10:40'),
+(32, 14, 31, 1, 60, '2017-07-04 16:14:34', '2017-07-04 16:14:34'),
+(33, 14, 54, 1, 45, '2017-07-04 16:14:34', '2017-07-04 16:14:34'),
+(34, 15, 1, 1, 46, '2017-07-15 04:31:29', '2017-07-15 04:31:29'),
+(35, 15, 3, 1, 53, '2017-07-15 04:31:29', '2017-07-15 04:31:29'),
+(36, 16, 3, 1, 53, '2017-07-15 04:34:12', '2017-07-15 04:34:12'),
+(37, 17, 2, 1, 35, '2017-07-15 04:36:29', '2017-07-15 04:36:29'),
+(38, 18, 10, 1, 45, '2017-07-15 04:38:50', '2017-07-15 04:38:50'),
+(39, 19, 14, 1, 49.5, '2017-07-15 04:41:29', '2017-07-15 04:41:29'),
+(40, 20, 33, 1, 55, '2017-07-15 04:46:17', '2017-07-15 04:46:17'),
+(41, 21, 7, 1, 65.5, '2017-07-15 04:53:53', '2017-07-15 04:53:53'),
+(42, 22, 7, 1, 65.5, '2017-07-15 04:56:11', '2017-07-15 04:56:11'),
+(43, 23, 2, 1, 35, '2017-07-15 04:57:32', '2017-07-15 04:57:32'),
+(44, 24, 26, 1, 55, '2017-07-15 04:59:32', '2017-07-15 04:59:32'),
+(45, 25, 35, 1, 19, '2017-07-15 05:00:53', '2017-07-15 05:00:53'),
+(46, 26, 8, 1, 60, '2017-07-15 12:35:11', '2017-07-15 12:35:11'),
+(47, 27, 6, 1, 45.5, '2017-07-15 12:38:08', '2017-07-15 12:38:08'),
+(48, 27, 46, 1, 49, '2017-07-15 12:38:08', '2017-07-15 12:38:08'),
+(49, 28, 2, 1, 35, '2017-07-15 12:38:56', '2017-07-15 12:38:56');
 
 -- --------------------------------------------------------
 
@@ -310,7 +353,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `productName`, `price`, `image`, `created_at`, `updated_at`) VALUES
-(1, 1, 'bánh cuốn hến', '46.000', 'banh-cuon-hen.png', NULL, '2017-07-06 22:05:25'),
+(1, 1, 'bánh cuốn hến', '46.000', 'banh-cuon-hen.png', NULL, '2017-07-06 15:05:25'),
 (2, 2, 'nước bưởi ép', '35.000', 'buoi-ep.png', NULL, NULL),
 (3, 3, 'chả phụng', '53.000', 'cha-phung.png', NULL, NULL),
 (4, 1, 'bánh hỏi thịt nướng', '56.000', 'banh-hoi-thit-nuong.png', NULL, NULL),
@@ -319,7 +362,7 @@ INSERT INTO `products` (`id`, `category_id`, `productName`, `price`, `image`, `c
 (7, 1, 'bánh ram ít', '65.500', 'banh-ram-it.png', NULL, NULL),
 (8, 1, 'bánh bèo', '60.000', 'banh-beo.png', NULL, NULL),
 (9, 1, 'bánh khoái', '40.000', 'banh-khoai.png', NULL, NULL),
-(10, 1, 'bánh ram huế', '39.000', 'banh-ram-hue.png', NULL, NULL),
+(10, 1, 'bánh ram huế', '45.000', 'banh-ram-hue.png', NULL, '2017-07-06 21:29:16'),
 (11, 1, 'bánh bột lọc', '56.500', 'banh-bot-loc.png', NULL, NULL),
 (12, 1, 'bánh lá', '45.500', 'banh-la.png', NULL, NULL),
 (13, 1, 'bánh ướt tôm cháy', '50.000', 'banh-uot-tom-chay.png', NULL, NULL),
@@ -354,8 +397,8 @@ INSERT INTO `products` (`id`, `category_id`, `productName`, `price`, `image`, `c
 (42, 6, 'bún bò giò nạc', '45.000', 'bun-bo-gio-nac.png', NULL, NULL),
 (43, 6, 'bún bò huế', '46.000', 'bun-bo-hue.png', NULL, NULL),
 (44, 6, 'bún bò tái đặc biệt', '47.000', 'bun-bo-tai-dac-biet.png', NULL, NULL),
-(45, 6, 'bún hến', '48.000', 'bun/bun-hen.png', NULL, NULL),
-(46, 6, 'mì quảng', '49.000', 'bun/mi-quang.png', NULL, NULL),
+(45, 6, 'bún hến', '48.000', 'bun-hen.png', NULL, NULL),
+(46, 6, 'mì quảng', '49.000', 'mi-quang.png', NULL, NULL),
 (47, 6, 'bún nem nướng', '50.000', 'bun-nem-nuong.png', NULL, NULL),
 (48, 6, 'bún thịt nướng', '51.000', 'bun-thit-nuong.png', NULL, NULL),
 (49, 4, 'bánh bèo', '55.000', 'banh-beo.png', NULL, NULL),
@@ -443,11 +486,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `level`, `lastName`, `name`, `address`, `birthday`, `phone`, `gender`, `email`, `other_email`, `facebook`, `password`, `image_avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 1, 'An', 'Trần Văn An', 'Phú Đô - Nam Từ Liêm - Hà Nội', '13/09/1996', '0946278350', NULL, 'tranvananuet@gmail.com', 'herolhp96@gmail.com', 'fb.com/abc', '$2y$10$aA2R8yvwCvTmN.w0kSo9CuCh4ZgnPSGgdHA9ULsykBvOg01irdwoq', '1498875416.jpg', '0cgjJC6QazABxqQeuQcEhhQJlH518htKKffyMneCa5tkAbUQHqByTzsI64oz', '2017-06-27 18:51:15', '2017-07-06 21:27:46'),
-(2, 2, 'Anh', 'Nguyễn Văn Mạnh', 'giao thủy', NULL, '0914395317', NULL, 'herolhp96@gmail.com', NULL, NULL, '$2y$10$/EhhoIOFQyy7Cd3E2pcY0.hMbG2f08APHTbjSrLiywsOBZcC8Ez2C', '1498826516.jpg', 'lnchGmpY6oF7tliKcvSvOjz67shqrXIjDbuMLUdEFiJGCW2MODHKDxcChUE7', '2017-06-30 04:48:56', '2017-07-03 09:06:45'),
-(3, 3, 'Công', 'Đặng Hữu Công', 'Liên Bang Nga', '12/2/1986', '0987654321', 'Nam', '123@gmail.com', NULL, NULL, '$2y$10$w1JFORhhAxs2hAJZ1oQLxegKu1z8sqV3QNihN0SYJL52UyZJgWzja', '1499039066.jpg', 'JPIY7oBGLheHrwRRCZQZ3oKPTsdli8BGrd2KgUkFXTKYZVqfYM6y2muxwjQC', '2017-06-30 21:36:47', '2017-07-02 16:44:26'),
-(4, 3, 'hưng', 'trần hưng', 'Nghĩa Hưng', NULL, '0914395317', NULL, 'antv96nd@gmail.com', NULL, NULL, '$2y$10$4tjjKZzIgUNGuFO81xllrOgfjdR7/6bkh4BE3tx2ZPacT0SeCZO.e', NULL, '0UhLLBLLuTAQ6EEkWSEwaYV3IsZmem0ig0U3eilcehyyTHhS0TM7fvREqauP', '2017-07-01 02:00:28', '2017-07-01 02:00:28'),
-(5, 3, 'Châu', 'Cao Thái Châu', 'Trà Vinh', NULL, '04862493357', NULL, 'chau@gmail.com', NULL, NULL, '$2y$10$FDwJVhvWX1FJThUX4pVMU.7aMKk8/mdzu/nod8IHaGW80G/eOJHxW', NULL, NULL, '2017-07-04 22:52:35', '2017-07-04 22:52:35');
+(1, 1, 'An', 'Trần Văn An', 'Phú Đô - Nam Từ Liêm - Hà Nội', '13/09/1996', '0946278350', NULL, 'tranvananuet@gmail.com', 'herolhp96@gmail.com', 'fb.com/abc', '$2y$10$aA2R8yvwCvTmN.w0kSo9CuCh4ZgnPSGgdHA9ULsykBvOg01irdwoq', '1498875416.jpg', '0cgjJC6QazABxqQeuQcEhhQJlH518htKKffyMneCa5tkAbUQHqByTzsI64oz', '2017-06-27 11:51:15', '2017-07-06 14:27:46'),
+(2, 2, 'Anh', 'Nguyễn Văn Mạnh', 'giao thủy', NULL, '0914395317', NULL, 'herolhp96@gmail.com', NULL, NULL, '$2y$10$/EhhoIOFQyy7Cd3E2pcY0.hMbG2f08APHTbjSrLiywsOBZcC8Ez2C', '1498826516.jpg', 'lnchGmpY6oF7tliKcvSvOjz67shqrXIjDbuMLUdEFiJGCW2MODHKDxcChUE7', '2017-06-29 21:48:56', '2017-07-03 02:06:45'),
+(3, 3, 'Công', 'Đặng Hữu Công', 'Liên Bang Nga', '12/2/1986', '0987654321', 'Nam', '123@gmail.com', NULL, NULL, '$2y$10$w1JFORhhAxs2hAJZ1oQLxegKu1z8sqV3QNihN0SYJL52UyZJgWzja', '1499039066.jpg', 'JPIY7oBGLheHrwRRCZQZ3oKPTsdli8BGrd2KgUkFXTKYZVqfYM6y2muxwjQC', '2017-06-30 14:36:47', '2017-07-02 09:44:26'),
+(4, 3, 'hưng', 'trần hưng', 'Nghĩa Hưng', NULL, '0914395317', NULL, 'antv96nd@gmail.com', NULL, NULL, '$2y$10$4tjjKZzIgUNGuFO81xllrOgfjdR7/6bkh4BE3tx2ZPacT0SeCZO.e', NULL, '0UhLLBLLuTAQ6EEkWSEwaYV3IsZmem0ig0U3eilcehyyTHhS0TM7fvREqauP', '2017-06-30 19:00:28', '2017-06-30 19:00:28'),
+(5, 3, 'Châu', 'Cao Thái Châu', 'Trà Vinh', NULL, '04862493357', NULL, 'chau@gmail.com', NULL, NULL, '$2y$10$FDwJVhvWX1FJThUX4pVMU.7aMKk8/mdzu/nod8IHaGW80G/eOJHxW', NULL, NULL, '2017-07-04 15:52:35', '2017-07-04 15:52:35');
 
 --
 -- Indexes for dumped tables
@@ -544,7 +587,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `locations`
 --
@@ -559,12 +602,12 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `products`
 --

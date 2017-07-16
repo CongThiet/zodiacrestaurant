@@ -27,7 +27,7 @@
                         <div class="list-order-user">
                             <span><strong>Mã đơn hàng:</strong><i>#{{$order->id}}</i></span>
                             <a class="btn btn-app" href="{{route('view-order-detail',['order'=>$order->id])}}" ><i class="fa fa-play"></i> Xem chi tiết</a>
-                            <p><strong >Ngày đặt hàng:</strong><i>{{$order->created_at->toDateString()}}</i></p>
+                            <p><strong >Ngày đặt hàng:</strong><i>{{$order->orderDate}}</i></p>
                             <p><strong >Trạng thái đơn hàng:</strong><i>{{$order->status}}</i></p><br>
                         </div>
                     @endforeach

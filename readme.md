@@ -31,10 +31,19 @@ http://zodiacrestaurant.hol.es/
 ## Database
   Mysql
 
-
 ## Import Database
 - Tạo một database, import file ```restaurant_db.sql```.
-- Sửa cấu hình trong file ```env``` và ```config/database.php``` 
+
+## Run
+1. Clone the directory
+2. Composer Update
+  ```composer update```
+3. Set Up Database Connection
+  - Sửa cấu hình trong file ```.env.example``` và ```config/database.php``` 
     <li>DB_DATABASE= tên database</li>
     <li>DB_USERNAME=tên người dùng đc quyền truy cập database</li>
     <li>DB_PASSWORD= mật khẩu người dùng được quyền truy cập database</li>
+4. Setup the Key
+  ```php artisan key:generate```
+5. Run The Website
+  ```php artisan serve```
