@@ -94,6 +94,7 @@ body {
     height: 260px;
 }
 
+.thumbnail-image,
 .thumbnail-img {
     border: 2px solid #767676;
 }
@@ -633,7 +634,10 @@ ul li {
 .box-order {
     min-height: 500px;
     margin-top: 50px;
+    border-top: 1px solid #767676;
 }
+
+.view-day {}
 
 .order-today {
     line-height: 30px;
@@ -731,7 +735,7 @@ ul li {
     /*Safari shadow version*/
     -moz-box-shadow: 0px 0px 30px gray;
     /*Mozilla shadow version*/
-    width: 348px;
+    width: 346px;
     height: 348px;
 }
 
@@ -851,7 +855,7 @@ ul li {
         /*Safari shadow version*/
         -moz-box-shadow: 0px 0px 30px gray;
         /*Mozilla shadow version*/
-        width: 268px;
+        width: 278px;
         height: 268px;
     }
     .product-control {

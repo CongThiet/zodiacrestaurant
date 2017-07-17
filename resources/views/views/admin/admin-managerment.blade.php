@@ -3,6 +3,7 @@
     @include('layouts.nav-custom')
 @endsection
 @section('content')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {!! Charts::assets() !!}
 <div class="col-md-12 box-page">
 	<div class="container">
@@ -29,23 +30,23 @@
                 <div role="tabpanel" class="tab-pane active" id="menu">
                     <div class="manager-menu" style ="min-height: 500px;">
                         <h5>Danh mục sản phẩm</h5>
-                        <form class="form-horizontal" role="form" action ="{{route('product-search')}}" method ='POST' accept-charset='utf-8'>
-                                        {{ csrf_field() }}           
+                        {{--  <form class="form-horizontal" role="form" action ="{{route('product-search')}}" method ='POST' accept-charset='utf-8'>
+                                        {{ csrf_field() }}             --}}
                             <div class="input-group" id="adv-search" style="margin-bottom: 30px;">
-                                <input type="text" name = "search" class="form-control" placeholder="Tìm kiếm món ăn">
+                                <input type="text" id = "search" name = "search" class="form-control" placeholder="Tìm kiếm món ăn">
                                 <div class="input-group-btn">
                                     <div class="btn-group" role="group">
                                         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        {{--  </form>  --}}
                             <table class="table table-hover table-condensed table-bordered table-menu" id ="table-menu">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Price</th>
+                                        <th class="col-md-2">ID</th>
+                                        <th class="col-md-6">Name</th>
+                                        <th class="col-md-4">Price</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -59,7 +60,29 @@
                                 </tbody>
                             </table>
                             <div class="container panginate" id="paginate-menu">{{$products->links()}}</div>
-                            @if(Session::has('products'))
+                            <script>
+                                $('#search').on('keyup', function(){
+                                    $value = $(this).val();
+                                    $.ajax({
+                                        type: "get",
+                                        dataType: "json",
+                                        url: '/admin/product/search',
+                                        data: {search: $value},
+                                        success: function (result) {
+                                                if(result){
+                                                    $('tbody').html(result);
+                                                }
+                                        },
+                                    });
+                                    if ($value == ''){
+                                        $("#paginate-menu").css("display", "block");
+                                    }
+                                    else{
+                                        $("#paginate-menu").css("display", "none");
+                                    }
+                                })
+                            </script>
+                            {{--  @if(Session::has('products'))
                                 <script>
                                     $("#table-menu").css("display", "none");
                                     $("#paginate-menu").css("display", "none");
@@ -82,21 +105,7 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                            {{-- @else
-                            <div class="row text-center" >
-                                <div class="box-search-null">
-                                    <strong>
-                                    <p>Không có món ăn nào được tìm thấy!!!</p>
-                                    <p>Trở lại</p>
-                                    </strong>
-                                    <a href="{{route('admin-managerment')}}" style="text-decoration: none;">
-                                        <button type="button" class="btn btn-primary">
-                                            Trang quản lý
-                                        </button>
-                                    </a>
-                                </div>
-                            </div> --}}
-                            @endif
+                            @endif  --}}
                     </div>
                  
                 </div>

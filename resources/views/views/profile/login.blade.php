@@ -58,12 +58,12 @@
 							{{ csrf_field() }}	
 							<div style="margin-bottom: 25px" class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input id="login-email" type="text" class="form-control" name="email" value="" placeholder="Email" required>                                        
+										<input id="login-email" type="text" class="form-control" name="email" value="" placeholder="Email" >                                        
 							</div>
 								
 							<div style="margin-bottom: 25px" class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-										<input id="login-password" type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+										<input id="login-password" type="password" class="form-control" name="password" placeholder="Mật khẩu" >
 							</div>
 
 							<div class="input-group">

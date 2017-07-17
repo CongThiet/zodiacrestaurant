@@ -31,7 +31,7 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
         Route::get('/product/control/{product}','AdminController@managermentProduct')->name('admin-product');
         Route::put('/product/update/{product}','AdminController@managermentProductUpdate')->name('admin-product-update');
         Route::post('/product/remove/{product}','AdminController@managermentProductRemove')->name('admin-product-remove');
-        Route::post('/product/search','AdminController@productSearch')->name('product-search');
+        Route::get('/product/search','AdminController@productSearch')->name('product-search');
     });
 });
 //cart

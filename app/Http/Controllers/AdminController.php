@@ -118,12 +118,22 @@ class AdminController extends Controller
         return redirect(route('admin-managerment'));
     }
     public function productSearch(Request $request){
+        $output = " ";
         $search =$request->search;
         $products = Product::where('productName', 'like',"%$search%")
                             ->get();
-        session()->flash('products', $products);
-        return redirect()->back();
-        
+        if($request->ajax()){
+            if($products){
+                foreach($products as $product){
+                $output .= '<tr>'.
+                                '<td>'.$product->id.'</td>'.
+                                '<td><a href="/admin/product/control/'.$product->id.'" title="'.$product->productName.'">'.$product->productName.'</a></td>'.
+                                '<td>'.$product->price.'VNĐ</td>'.
+                            '</tr>';
+                }
+            }
+            return response()->json($output);  
+        }
     }
 
 }

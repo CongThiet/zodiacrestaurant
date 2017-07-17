@@ -8,9 +8,9 @@
         <div class="box-head" >
             <h4>Tất cả đơn hàng</h4>
         </div>
-        <div class="box-order">
+        <div class="box-order" >
         {{-- "../../vieworder/{{$order->user_id}}/{{$order->id}}" --}}
-            <div class="col-md-6">
+            <div class="col-md-6 view-day">
                 <div class="row">
                     <h4><strong>Ngày hôm nay:<i style="margin-left: 67px;"> {{$today}}</i></strong></h4>
                     <div class="space">&nbsp;</div>
