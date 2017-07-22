@@ -145,7 +145,7 @@ class CartController extends Controller
         }
         Session::forget('cart');
         return redirect()->back()->with('notification','Bạn đặt hàng thành công!!!');
-        // Cách 2 dùng Request $request
+        // use Request $request
         // $customer = new Customer;
         // $customer->user_id = Auth::user()->id;
         // $customer->name = $request->name;

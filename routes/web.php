@@ -18,20 +18,20 @@ Route::group(['prefix' => 'profile','middleware' => 'auth'], function () {
 //admin
 Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
     Route::group(['middleware' => 'CheckLevelOrder'], function () {
-        Route::get('/order', 'AdminController@viewOrder')->name('admin-order');
-        Route::post('/order/custom', 'AdminController@selectDay')->name('admin-order-cus');
-        Route::post('/order/confirm/{order}','AdminController@ordered')->name('admin-order-confirm');
+        Route::get('/order', 'Admin\AdminController@viewOrder')->name('admin-order');
+        Route::post('/order/custom', 'Admin\AdminController@selectDay')->name('admin-order-cus');
+        Route::post('/order/confirm/{order}','Admin\AdminController@ordered')->name('admin-order-confirm');
     });
     Route::group(['middleware' => 'CheckLevelProductAndContact'], function () {
-        Route::get('/contact', 'AdminController@viewContact')->name('admin-contact');
-        Route::post('/contact/destroy', 'AdminController@contactDestroy')->name('admin-contact-destroy');
-        Route::get('/contact/{contact}', 'AdminController@viewContactDetail')->name('admin-contact-detail');
-        Route::post('/contact/seen/{contact}', 'AdminController@contactDetailSeen')->name('admin-contact-seen');
-        Route::get('/managerment', 'AdminController@manager')->name('admin-managerment');
-        Route::get('/product/control/{product}','AdminController@managermentProduct')->name('admin-product');
-        Route::put('/product/update/{product}','AdminController@managermentProductUpdate')->name('admin-product-update');
-        Route::post('/product/remove/{product}','AdminController@managermentProductRemove')->name('admin-product-remove');
-        Route::get('/product/search','AdminController@productSearch')->name('product-search');
+        Route::get('/contact', 'Admin\AdminController@viewContact')->name('admin-contact');
+        Route::post('/contact/destroy', 'Admin\AdminController@contactDestroy')->name('admin-contact-destroy');
+        Route::get('/contact/{contact}', 'Admin\AdminController@viewContactDetail')->name('admin-contact-detail');
+        Route::post('/contact/seen/{contact}', 'Admin\AdminController@contactDetailSeen')->name('admin-contact-seen');
+        Route::get('/managerment', 'Admin\AdminController@manager')->name('admin-managerment');
+        Route::get('/product/control/{product}','Admin\AdminController@managermentProduct')->name('admin-product');
+        Route::put('/product/update/{product}','Admin\AdminController@managermentProductUpdate')->name('admin-product-update');
+        Route::post('/product/remove/{product}','Admin\AdminController@managermentProductRemove')->name('admin-product-remove');
+        Route::get('/product/search','Admin\AdminController@productSearch')->name('product-search');
     });
 });
 //cart

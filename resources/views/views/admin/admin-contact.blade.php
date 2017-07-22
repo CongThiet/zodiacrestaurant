@@ -44,7 +44,7 @@
                                 <tbody>
                                    @foreach($contacts as $contact)
                                         <tr>
-                                            <td class="col-md-1"><span>{{$contact->id}}</span></td>
+                                            <td class="col-md-1"><span>{{++$loop->index}}</span></td>
                                             <td class="contact-name col-md-3"><span><b>{{$contact->name}}</b></span></td>
                                             <td class="contact-message"><a href="{{route('admin-contact-detail',['contact'=>$contact->id])}}" title="Liên lạc chưa xem"><b>{{$contact->message}}</b></a></td>
                                             <td><input type="checkbox" name="checkbox[]" id="{{$contact->id}}" value="{{$contact->id}}"></td>
@@ -80,7 +80,7 @@
                                 <tbody>
                                    @foreach($contactSeens as $contactSeen)
                                         <tr>
-                                            <td class="col-md-1"><span>{{$contactSeen->id}}</span></td>
+                                            <td class="col-md-1"><span>{{++$loop->index}}</span></td>
                                             <td class="contact-name col-md-3"><span><b>{{$contactSeen->name}}</b></span></td>
                                             <td class="contact-message"><a href="{{route('admin-contact-detail',['contact'=>$contactSeen->id])}}" title="Liên lạc chưa xem"><b>{{$contactSeen->message}}</b></a></td>
                                             <td><input type="checkbox" name="checkbox[]" id="{{$contactSeen->id}}" value="{{$contactSeen->id}}"></td>

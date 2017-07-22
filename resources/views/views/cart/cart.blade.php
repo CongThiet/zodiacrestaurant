@@ -8,7 +8,7 @@
             <strong>{{session('notification')}}</strong><br><br>
             <a href="{{route('view-order',['user'=>Auth::user()->id])}}" style="text-decoration: none;">
                 <button type="button" class="btn btn-info">
-                    <i class="fa fa-hand-o-right" aria-hidden="true"></i></span>Xem đơn hàng
+                    <i class="fa fa-hand-o-right" aria-hidden="true"></i></span> Xem đơn hàng
                 </button>
             </a>
         </div>

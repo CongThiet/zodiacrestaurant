@@ -15,13 +15,15 @@
                     <h4><strong>Ngày hôm nay:<i style="margin-left: 67px;"> {{$today}}</i></strong></h4>
                     <div class="space">&nbsp;</div>
                     <div class="order-today">
-                        <h4><strong>Đơn hàng ngày: <i style="margin-left: 50px;">{{$today}}</i></strong></h4>
-                        <div class="space">&nbsp;</div>
+                        <h4><strong>Đơn hàng ngày: <i style="margin-left: 50px;">{{$today}}</i></strong></h4><br>
+                        
                         @foreach($orders as $order)
+                        <div class="list-order">
                             <span><strong >Mã đơn hàng:</strong><i style="margin-left: 15px;">#{{$order->id}}</i></span>
                             <span style="margin-left: 35px"><strong >Trạng thái:</strong><i style="margin-left: 15px;"> {{$order->status}}</i></span><br>
                             <span><strong >Người nhận đơn hàng:</strong><i style="margin-left: 15px; min-height: 50px;">{{$order->nameShip}}</i></span><br>
                             <a class="btn btn-app" href="{{route('view-order-detail',['order'=>$order->id])}}" ><i class="fa fa-play"></i> Xem chi tiết</a><br><br>
+                        </div>
                         @endforeach
                     </div>
                     <div class="container panginate">{{$orders->links()}}</div>
@@ -56,10 +58,12 @@
                         @endif
                         @if(session('orderDay'))
                         @foreach(session('orderDay') as $orderDay)
-                            <span><strong >Mã đơn hàng:</strong><i style="margin-left: 15px;">#{{$orderDay->id}}</i></span>
-                            <span style="margin-left: 35px"><strong >Trạng thái:</strong><i style="margin-left: 15px;"> {{$orderDay->status}}</i></span><br>
-                            <span><strong >Người nhận đơn hàng:</strong><i style="margin-left: 15px; min-height: 50px;">{{$orderDay->nameShip}}</i></span><br>
-                            <a class="btn btn-app" href="{{route('view-order-detail',['order'=>$orderDay->id])}}" ><i class="fa fa-play"></i> Xem chi tiết</a><br><br>
+                            <div class="list-order-select">
+                                <span><strong >Mã đơn hàng:</strong><i style="margin-left: 15px;">#{{$orderDay->id}}</i></span>
+                                <span style="margin-left: 35px"><strong >Trạng thái:</strong><i style="margin-left: 15px;"> {{$orderDay->status}}</i></span><br>
+                                <span><strong >Người nhận đơn hàng:</strong><i style="margin-left: 15px; min-height: 50px;">{{$orderDay->nameShip}}</i></span><br>
+                                <a class="btn btn-app" href="{{route('view-order-detail',['order'=>$orderDay->id])}}" ><i class="fa fa-play"></i> Xem chi tiết</a><br><br>
+                            </div>
                         @endforeach
                         @endif
                         </div>

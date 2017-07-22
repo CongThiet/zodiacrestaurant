@@ -221,9 +221,12 @@ ul li {
     background-color: #54af58!important;
 }
 
+.list-order,
+.list-order-select,
 .list-order-user {
     margin-bottom: 20px;
-    margin-top: 0px
+    margin-top: 0px;
+    border-bottom: 1px solid #555;
 }
 
 .list-order-user i {
@@ -641,8 +644,13 @@ ul li {
 
 .view-day {}
 
+.order-select-day,
 .order-today {
-    line-height: 30px;
+    line-height: 25px;
+}
+
+.order-today h4 {
+    margin-top: 69px;
 }
 
 .select-day h4 {
