@@ -1,28 +1,6 @@
 @extends('layouts.master')
 @section('nav')
-    @extends('layouts.nav')
-    @section('navbar')
-        <ul class="nav navbar-nav">
-            <li class="hidden">
-                <a href="#page-top"></a>
-            </li>
-            <li>
-                <a class="page-scroll" href="{{route('home')}}/#1"><strong>Giới thiệu</strong></a>
-            </li>
-            <li>
-                <a class="page-scroll" href="{{route('home')}}/#menu"><strong>Thực đơn</strong></a>
-            </li>
-            <li>
-                <a class="page-scroll" href="{{route('home')}}/location"><strong>Địa điểm</strong></a>
-            </li>
-            <li>
-                <a class="page-scroll " href="{{route('home')}}/promotion"><strong>Khuyến mãi</strong></a>
-            </li>
-            <li>
-                <a class="page-scroll" href="{{route('home')}}/#5"><strong>Liên Hệ</strong></a>
-            </li>
-        </ul>
-    @endsection
+    @include('layouts.nav')
 @endsection
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

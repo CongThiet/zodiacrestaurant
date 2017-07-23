@@ -669,6 +669,8 @@ ul li {
 .contact-message {
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 12px;
+    white-space: pre-wrap;
 }
 
 .contact-message a {
