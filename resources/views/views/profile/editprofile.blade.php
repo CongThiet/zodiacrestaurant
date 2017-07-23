@@ -90,8 +90,12 @@
                         </div>
                         <div class="form-group" id="gender">
                             <label class="control-label col-sm-4" for="gender">Giới tính:</label>
-                            <input id="male" type="radio" class="input-radio" name="gender" value="Nam"  style="width: 10%"><span>Nam</span>
-                            <input id="female" type="radio" class="input-radio" name="gender" value="Nữ" style="width: 10%" ><span>Nữ</span>
+                            @php
+                                $selectMale = Auth::user()->gender == "Nam" ? "checked" : null;
+                                $selectFemale = Auth::user()->gender == "Nữ" ? "checked" : null;
+                            @endphp
+                            <input id="male" type="radio" class="input-radio" name="gender" {{$selectMale}} value="Nam"  style="width: 10%"><span>Nam</span>
+                            <input id="female" type="radio" class="input-radio" name="gender" {{$selectFemale}} value="Nữ" style="width: 10%"><span>Nữ</span> 
                             
                         </div>
                         <div class="form-group">
