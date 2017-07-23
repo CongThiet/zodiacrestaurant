@@ -11,26 +11,9 @@
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li class="hidden">
-					<a href="#page-top"></a>
-				</li>
-				<li>
-					<a class="page-scroll" href="#1"><strong>Giới thiệu</strong></a>
-				</li>
-				<li>
-					<a class="page-scroll" href="#menu"><strong>Thực đơn</strong></a>
-				</li>
-				<li>
-					<a class="page-scroll" href="{{route('home')}}/location"><strong>Địa điểm</strong></a>
-				</li>
-				<li>
-					<a class="page-scroll " href="{{route('home')}}/promotion"><strong>Khuyến mãi</strong></a>
-				</li>
-				<li>
-					<a class="page-scroll" href="#5"><strong>Liên Hệ</strong></a>
-				</li>
-			</ul>
+			
+			@yield('navbar')
+			
 			<ul class="nav navbar-nav navbar-right" style="padding-right: 65px;">
 			@if(Auth::check())
 				<li class="dropdown dropdown-user" >

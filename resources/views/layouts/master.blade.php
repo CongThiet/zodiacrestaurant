@@ -20,7 +20,6 @@
 <body>
 {{-- BEGIN NAV --}}
 	@yield('nav')
-	@yield('nav-custom')
 {{-- END NAV --}}
 
 {{-- SECTION --}}
