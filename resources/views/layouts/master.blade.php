@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('/node_modules/font-awesome/css/font-awesome.css')}}">
 	{{-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> --}}
 	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alike+Angular" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{{asset('/node_modules/datepicker/datepicker3.css')}}">
 	
 </head>

@@ -33,12 +33,6 @@
         <div class="box-head">
             <h4>Quản lý</h4>
         </div>
-        {{-- <div class="manager-product">
-            <h4>Quản lý sản phẩm</h4>
-            <div class="manager-menu">
-               
-            </div>
-        </div> --}}
         <div class="manager-product">
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active">

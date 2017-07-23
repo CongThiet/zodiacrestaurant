@@ -773,6 +773,10 @@ ul li {
     margin-top: 100px;
 }
 
+.table-menu {
+    font-family: 'Alike Angular', serif;
+}
+
 .table-menu a {
     text-decoration: none;
     color: #000;
